@@ -1,0 +1,134 @@
+<!-- snippet: product-partials -->
+{%- comment %}
+  Renders general product partials.
+
+  Accepts:
+  - name: {String} The name of the partial to render
+{%- endcomment %}
+
+{%- case name -%}
+  {%- when 'buy_button' -%}
+    {%- comment -%}
+      Renders a buy button with variant id hidden input
+
+      Accepts:
+      - variant: {Object}
+    {%- endcomment -%}
+
+    {%- liquid
+      assign check_against_inventory = true
+      if variant.inventory_management != 'shopify' or variant.inventory_policy == 'continue'
+        assign check_against_inventory = false
+      endif
+      if variant.quantity_rule.min > variant.inventory_quantity and check_against_inventory
+        assign quantity_rule_soldout = true
+      endif
+    -%}
+
+    <input
+      type="hidden"
+      name="id"
+      value="{{ variant.id }}"
+      {% if variant.available == false or quantity_rule_soldout or variant == null %}
+        disabled
+      {% endif %}
+    >
+
+    <button
+      type="submit"
+      name="add"
+      class="button w-full"
+      {% if variant.available == false or quantity_rule_soldout or variant == null %}
+        disabled
+      {% endif %}
+    >
+      {%- if variant == null %}
+        {{- 'products.product.unavailable' | t -}}
+      {%- elsif variant.available == false or quantity_rule_soldout -%}
+        {{- 'products.product.sold_out' | t -}}
+      {%- else -%}
+        <span class="group-[[processing]]/ajax-cart-product-form:hidden">
+          {{- 'products.product.add_to_cart' | t -}}
+        </span>
+        <span class="hidden group-[[processing]]/ajax-cart-product-form:block animate-[fade-in_0.3s]">
+          <span
+            class="size-3 border border-transparent border-l-current animate-spin rounded-full inline-block me-2"
+          ></span>
+          {{- 'products.product.adding_to_cart' | t -}}
+        </span>
+      {%- endif -%}
+    </button>
+
+  {%- when 'structured_data' -%}
+    {%- comment -%}
+      Renders Schema.org JSON-LD for product.
+
+      Accepts:
+      - product: {Object}
+      - allow_js: {Boolean} optional
+    {%- endcomment -%}
+
+    {%- liquid
+      assign product_group_handle = product.metafields.product_group.collection_handle | default: blank
+      if product_group_handle != blank
+        assign product_group_collection = collections[product_group_handle]
+      endif
+    -%}
+
+    {%- if product_group_collection and allow_js -%}
+      <product-group-structured-data>
+        <script type="application/ld+json">
+          {{ product | structured_data }}
+        </script>
+        {%- for group_product in product_group_collection.products -%}
+          {%- if group_product.id != product.id %}
+            <script type="application/json" product-group-structured-data="product">
+              {{ group_product | structured_data }}
+            </script>
+          {%- endif -%}
+        {%- endfor -%}
+        <script type="application/json" product-group-structured-data="group">
+          {
+            "productGroupID": "{{ product_group_collection.id }}",
+            "name": {{ product_group_collection.title | json }},
+            "image": "{{ shop.url }}{{ product_group_collection.image | image_url: width: 1920 }}",
+            "description": {{ product_group_collection.description | strip_html | json }}
+          }
+        </script>
+      </product-group-structured-data>
+      <script>
+        customElements.define(
+          'product-group-structured-data',
+          class extends HTMLElement {
+            #processed = false;
+
+            connectedCallback() {
+              if (this.#processed) return;
+              const $mainProduct = this.querySelector("script[type='application/ld+json']");
+              if (!$mainProduct) return;
+              let mainJson = JSON.parse($mainProduct.innerHTML);
+              this.querySelectorAll("script[product-group-structured-data='product']").forEach(($script) => {
+                const json = JSON.parse($script.innerHTML);
+                mainJson.hasVariant = mainJson.hasVariant || [];
+                json.hasVariant = json.hasVariant || [];
+                mainJson.hasVariant = [...mainJson.hasVariant, ...json.hasVariant];
+              });
+              const groupJson = JSON.parse(
+                this.querySelector("script[product-group-structured-data='group']")?.innerHTML || '{}'
+              );
+              mainJson = {
+                ...mainJson,
+                ...groupJson,
+              };
+              $mainProduct.innerHTML = JSON.stringify(mainJson);
+              this.#processed = true;
+            }
+          }
+        );
+      </script>
+    {%- else -%}
+      <script type="application/ld+json">
+        {{ product | structured_data }}
+      </script>
+    {%- endif -%}
+{%- endcase -%}

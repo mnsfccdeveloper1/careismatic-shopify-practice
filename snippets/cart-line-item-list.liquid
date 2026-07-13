@@ -1,0 +1,35 @@
+<!-- snippet: cart-line-item-list -->
+{%- comment -%}
+  Renders the cart items as a <ul>. One <li> per cart entry — a default line
+  item, or a "set" (one <li> containing its members). Child line items of a
+  group are skipped here; the parent's template renders them.
+{%- endcomment -%}
+
+<div class="px-5">
+<ul role="list" class="divide-y divide-grey-light border-b border-grey-light border-solid">
+{%- liquid
+ 
+  for line_item in cart.items
+    assign group_role = line_item.properties._group_role
+    if group_role == 'child'
+      continue
+    endif
+
+ 
+      if group_role == 'parent'
+        assign cart_template = line_item.properties._cart_template
+        case cart_template
+          when 'set'
+            render 'cart-template-set', parent: line_item, line_item_index: forloop.index
+          else
+            render 'cart-line-item', line_item: line_item, line_item_index: forloop.index
+        endcase
+      else
+        render 'cart-line-item', line_item: line_item, line_item_index: forloop.index
+      endif
+
+  endfor
+-%}
+
+</ul>
+</div>

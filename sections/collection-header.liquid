@@ -1,0 +1,130 @@
+<!-- section: collection-header -->
+
+{%- liquid
+  assign s = section.settings
+
+  # collection has description
+  assign has_description = false
+  if collection.description != blank
+    assign has_description = true
+  endif
+
+  # collection uses container
+  assign wrapper_class = 'max-w-container mx-auto'
+  assign gutter_class = ""
+  assign rounded_class = ""
+  if s.wrap_in_container
+    assign gutter_class = ' lg:px-gutter '
+    assign rounded_class = "lg:rounded-theme"
+  endif
+
+  # collection has image
+  assign has_image = false
+  if collection.image
+    assign has_image = true
+  endif
+
+  assign section_class = ''
+  assign active_color_scheme = s.color_scheme
+  if has_image
+    assign section_class = 'lg:mb-section'
+    assign active_color_scheme = s.image_color_scheme
+  endif
+
+  # collection is empty
+  assign empty_text_class = ''
+  if collection.products.size == 0
+    assign empty_text_class = 'text-center'
+  endif
+-%}
+
+
+
+<section class="{{ section_class }} {{ gutter_class }}">
+
+  <div class="{{ wrapper_class }}">
+    <div class="relative overflow-hidden {{ rounded_class }} 
+      color-{{ active_color_scheme }}">
+
+      {%- if collection.products.size == 0 -%}
+
+        <div class="flex-center py-10 lg:py-20">
+          <h1 class="fs-display-2 text-center">
+            {{- collection.title | escape -}}
+          </h1>
+        </div>
+
+      {%- elsif has_image -%}
+
+        <div class="absolute inset-0 w-full h-full">
+          {%- capture content -%}
+            {{- collection.image | image_url: width: 1920 | image_tag:
+              class: 'w-full h-full object-cover',
+              loading: 'eager',
+              fetchpriority: 'high',
+              sizes: '100vw',
+              widths: '600, 900, 1200, 1440, 1920'
+            -}}
+          {%- endcapture -%}
+          {%- render 'media-loader', content: content, show_skeleton: true -%}
+        </div>
+
+        <div class="relative z-10 flex items-center h-[250px] lg:h-[453px] px-gutter py-md lg:py-lg">
+          <div class="flex flex-col gap-2 lg:gap-6 max-w-[620px]">
+            <h1 class="fs-display-2 text-pretty">
+              {{- collection.title | escape -}}
+            </h1>
+            {%- if has_description -%}
+              <div class="text-pretty">
+                <rte-content class="rte">{{- collection.description -}}</rte-content>
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+
+      {%- else -%}
+
+        <div class="flex items-center px-gutter px-gutter py-10 lg:px-0 lg:py-20">
+          <div class="flex flex-col gap-2 lg:gap-6">
+            <h1 class="fs-display-2">
+              {{- collection.title | escape -}}
+            </h1>
+            {%- if has_description -%}
+              <div>
+                <rte-content class="rte">{{- collection.description -}}</rte-content>
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+
+      {%- endif -%}
+
+    </div>
+  </div>
+</section>
+
+{% render 'subcollections-list', collection: collection %}
+
+{% schema %}
+{
+  "name": "Collection Header",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme"
+    },
+    {
+      "type": "color_scheme",
+      "id": "image_color_scheme",
+      "label": "Image color scheme"
+    },
+    {
+      "type": "checkbox",
+      "id": "wrap_in_container",
+      "label": "Wrap in container",
+      "default": true
+    }
+  ]
+}
+{% endschema %}

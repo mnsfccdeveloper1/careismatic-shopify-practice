@@ -1,0 +1,194 @@
+<!-- section: visual-nav -->
+
+{%- liquid
+  assign s = section.settings
+
+  assign container_max_width = ''
+  if s.use_max_width
+    assign container_max_width = 'max-w-container'
+  endif
+
+  assign show_header = false
+  if s.heading != blank
+    assign show_header = true
+  endif
+
+  # Item shape — literal Tailwind radius utilities so the scanner detects them.
+  # Square radius maps the 0/4/8/12px setting to the matching utility (Tailwind
+  # v4 defaults: sm = 4px, lg = 8px, xl = 12px; theme does not override the scale).
+  assign shape_class = 'rounded-full'
+  if s.shape == 'square'
+    assign shape_class = 'rounded-none'
+    if s.corner_radius == 4
+      assign shape_class = 'rounded-sm'
+    elsif s.corner_radius == 8
+      assign shape_class = 'rounded-lg'
+    elsif s.corner_radius == 12
+      assign shape_class = 'rounded-xl'
+    endif
+  endif
+-%}
+
+<section class="color-{{ s.color_scheme }} {{ s.top_padding }} {{ s.bottom_padding }} overflow-hidden ">
+  <div class="mx-auto {{ container_max_width }} px-gutter">
+
+    {% if show_header %}
+      <div class="flex justify-between items-center gap-4 mb-sm">
+        <div class="flex-1 min-w-0">
+          <div role="heading" aria-level="2" class="fs-display-3 mb-0 text-pretty">{{ s.heading | escape }}</div>
+        </div>
+      </div>
+    {% endif %}
+
+    {% if section.blocks.size > 0 %}
+      <tarot-carousel class="group relative block">
+
+        {% render 'carousel-buttons',
+          prev_class: 'flex absolute left-4 z-2 opacity-0 group-hover:opacity-100 transition-opacity',
+          next_class: 'flex absolute right-4  z-2 opacity-0 group-hover:opacity-100 transition-opacity'
+        %}
+
+        <script type="application/json" data-tarot-options>
+          {
+            "effect": "carousel",
+            "loop": {{ s.carousel_loop | json }},
+            "gap": "12px",
+            "slidesPerView": {{ s.slides_per_view_mobile | json }},
+            "navigation": {
+              "showButtons": false,
+              "showPagination": false,
+              "smartButtons": true
+            },
+            "breakpoints": {
+              "768": {
+                "slidesPerView": {{ s.slides_per_view_tablet | json }},
+                "navigation": { "showButtons": true }
+              },
+              "1024": {
+                "slidesPerView": {{ s.slides_per_view_laptop | json }},
+                "navigation": { "showButtons": true }
+              },
+              "1280": {
+                "slidesPerView": {{ s.slides_per_view_desktop | json }},
+                "navigation": { "showButtons": true }
+              }
+            }
+          }
+        </script>
+
+        <tarot-viewport class="">
+          <tarot-track>
+            {% for block in section.blocks %}
+              {%- assign b = block.settings -%}
+              {% if b.image == blank or b.label == blank or b.link == blank %}{% continue %}{% endif %}
+              <tarot-slide {{ block.shopify_attributes }}>
+                <a href="{{ b.link }}" class="block group no-underline flex flex-col items-center gap-2">
+                  <div class="relative w-full aspect-square overflow-hidden {{ shape_class }}">
+                    {%- capture content -%}
+                      {{- b.image
+                        | image_url: width: 600
+                        | image_tag:
+                            class: 'w-full h-full object-cover transition group-hover:scale-105',
+                            loading: 'lazy',
+                            alt: b.label,
+                            sizes: '(min-width: 1024px) 15vw, 30vw',
+                            widths: '200, 300, 400, 600'
+                      -}}
+                    {%- endcapture -%}
+                    {%- render 'media-loader', content: content, show_skeleton: true -%}
+                  </div>
+                  <p class="fs-body-md text-center mt-1">{{ b.label | escape }}</p>
+                </a>
+              </tarot-slide>
+            {% endfor %}
+          </tarot-track>
+        </tarot-viewport>
+      </tarot-carousel>
+    {% endif %}
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Visual Nav",
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme" },
+    { "type": "checkbox", "id": "use_max_width", "label": "Use container max-width", "default": true },
+
+    { "type": "header", "content": "Content" },
+    { "type": "text", "id": "heading", "label": "Heading" },
+
+    { "type": "header", "content": "Items" },
+    {
+      "type": "select",
+      "id": "shape",
+      "label": "Image shape",
+      "options": [
+        { "value": "circle", "label": "Circle" },
+        { "value": "square", "label": "Square" }
+      ],
+      "default": "circle"
+    },
+    {
+      "type": "range",
+      "id": "corner_radius",
+      "label": "Corner radius",
+      "min": 0,
+      "max": 12,
+      "step": 4,
+      "unit": "px",
+      "default": 8,
+      "visible_if": "{{ section.settings.shape == 'square' }}"
+    },
+
+    { "type": "header", "content": "Carousel" },
+    { "type": "checkbox", "id": "carousel_loop", "label": "Loop carousel", "default": false },
+    { "type": "range", "id": "slides_per_view_mobile", "label": "Slides per view (mobile)", "min": 1, "max": 6, "step": 1, "default": 3 },
+    { "type": "range", "id": "slides_per_view_tablet", "label": "Slides per view (tablet)", "min": 2, "max": 8, "step": 1, "default": 4 },
+    { "type": "range", "id": "slides_per_view_laptop", "label": "Slides per view (laptop)", "min": 2, "max": 10, "step": 1, "default": 6 },
+    { "type": "range", "id": "slides_per_view_desktop", "label": "Slides per view (desktop)", "min": 2, "max": 12, "step": 1, "default": 8 },
+
+    { "type": "header", "content": "Layout" },
+    {
+      "type": "select",
+      "id": "top_padding",
+      "label": "Top padding",
+      "default": "pt-md",
+      "options": [
+        { "value": "pt-0", "label": "None" },
+        { "value": "pt-sm", "label": "Small" },
+        { "value": "pt-md", "label": "Medium" },
+        { "value": "pt-lg", "label": "Large" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "bottom_padding",
+      "label": "Bottom padding",
+      "default": "pb-md",
+      "options": [
+        { "value": "pb-0", "label": "None" },
+        { "value": "pb-sm", "label": "Small" },
+        { "value": "pb-md", "label": "Medium" },
+        { "value": "pb-lg", "label": "Large" }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "nav_item",
+      "name": "Nav Item",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "label", "label": "Label", "default": "Nav item" },
+        { "type": "url", "id": "link", "label": "Link" }
+      ]
+    }
+  ],
+
+  "disabled_on": {
+    "groups": ["*"]
+  }
+}
+{% endschema %}

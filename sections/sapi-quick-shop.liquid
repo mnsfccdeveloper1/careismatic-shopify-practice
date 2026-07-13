@@ -1,0 +1,114 @@
+<!-- section: sapi-quick-shop -->
+{%- comment -%}
+  For Shopify Section API only
+{%- endcomment -%}
+
+{%- liquid
+  if product.has_only_default_variant
+    assign current_variant = product.variants[0]
+  else
+    assign current_variant = product.selected_variant | default: product.selected_or_first_available_variant
+  endif
+
+  assign base_id = 'quick-shop-' | append: section.id
+  assign product_form_id = base_id | append: '-form'
+
+  capture product_title_html
+    render 'product-title', product: product
+  endcapture
+
+  capture product_fresh_price_html
+    render 'product-price', target: product
+  endcapture
+
+  capture product_variant_price_html
+    render 'product-price', target: current_variant
+  endcapture
+-%}
+
+<html-fetcher>
+  <div data-html-fetcher-area>
+    <product-fetcher
+      section="sapi-quick-shop"
+      id="{{ base_id }}-product-fetcher"
+      sapi-id="{{ base_id }}-product-fetcher"
+      disable-view-transition>
+      {%- # JSON data -%}
+      {% render 'product-fetcher-state',
+        product: product,
+        variant: current_variant,
+        collection_context: collection
+      %}
+
+      {%- # Image and product info -%}
+      <div class="flex gap-4 md:gap-6">
+        {%- # Variant image - in gallery area so it only swaps on color picks -%}
+        <div data-product-fetcher-area="gallery">
+          {%- assign variant_image = current_variant.featured_image
+            | default: product.featured_image
+          -%}
+          {%- if variant_image -%}
+            {{-
+              variant_image
+              | image_url: width: 480
+              | image_tag: loading: 'lazy', sizes: '160px', style: 'max-width: 160px;'
+            -}}
+          {%- endif -%}
+        </div>
+
+        {%- # Product info column - variant area so title/price update on size picks -%}
+        <div
+          class="flex flex-col gap-1 items-start justify-center"
+          data-product-fetcher-area="variant">
+          {%- render 'product-meta-collection', product: product -%}
+
+          <div class="font-medium">{{ product_title_html }}</div>
+
+          <div class="text-sm" data-quick-shop-price>
+            <div data-quick-shop-price-fresh>
+              {{- product_fresh_price_html -}}
+            </div>
+            <div data-quick-shop-price-variant hidden>
+              {{- product_variant_price_html -}}
+            </div>
+          </div>
+
+          <a
+            href="{{ product.url }}"
+            class="button button-outline-black button-sm mt-1">
+            View Details
+          </a>
+        </div>
+      </div>
+
+      {%- # Description -%}
+      {%- if product.description != blank -%}
+        <div class="pt-md mb-6">
+          <rte-content class="block rte">
+            {{ product.description }}
+          </rte-content>
+        </div>
+      {%- endif -%}
+
+      {%- # Info -%}
+
+      <div
+        data-product-fetcher-area="variant"
+        class="w-full lg:w-auto grow">
+        <div class="empty:hidden">
+          {% render 'product-options-list',
+            product: product,
+            collection_context: collection,
+            hide_size_guide: true
+          %}
+        </div>
+
+        {% render 'product-form',
+          product: product,
+          variant: current_variant,
+          product_form_id: product_form_id
+        %}
+      </div>
+    </product-fetcher>
+  </div>
+</html-fetcher>

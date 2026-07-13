@@ -1,0 +1,13 @@
+
+
+<script>
+	window.routes = {
+	  predictive_search_url: '{{ routes.predictive_search_url }}',
+	};
+</script>
+
+{%- render 'klaviyo-main-script' -%}
+
+{%- if template contains 'product' -%}
+  {%- render 'klaviyo-product-tracker' -%}
+{%- endif -%}
