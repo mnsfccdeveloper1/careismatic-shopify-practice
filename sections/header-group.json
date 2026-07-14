@@ -54,8 +54,8 @@
         "mega_menu_844UQU": {
           "type": "mega_menu",
           "settings": {
-            "title": "",
-            "menu": "women",
+            "title": "Women",
+            "menu": "",
             "image_url": "shopify://collections/womens-new-arrivals",
             "image_text": ""
           }
@@ -64,7 +64,7 @@
           "type": "mega_menu",
           "settings": {
             "title": "Men",
-            "menu": "men",
+            "menu": "",
             "image_url": "",
             "image_text": ""
           }
@@ -81,7 +81,7 @@
           "disabled": true,
           "settings": {
             "title": "Unisex",
-            "menu": "women",
+            "menu": "",
             "image_url": "",
             "image_text": ""
           }
@@ -92,7 +92,7 @@
           "settings": {
             "title": "",
             "url": "",
-            "menu": "blog"
+            "menu": ""
           }
         },
         "nav_link_htEWm6": {
