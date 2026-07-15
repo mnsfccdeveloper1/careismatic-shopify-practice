@@ -1,1 +1,682 @@
-{"sections":{"hero_banner_4iYHXM":{"type":"hero-banner","settings":{"color_scheme":"scheme-dark","transparent_header":true,"width":"full-width","add_padding":false,"section_height":75,"horizontal_position":"justify-center","vertical_position":"items-center","text_alignment":"text-center","video":"shopify:\/\/files\/videos\/ck-hero-brand-film-20260603.mp4","mobile_video":"shopify:\/\/files\/videos\/ck-mobile-hero-brand-film-20260603.mp4","overlay_color":"#000000","overlay_opacity":10,"eyebrow":"","heading":"ONE FOR ALL","use_h1":false,"heading_tag":"1","content_image_max_height":100,"richtext":"<p>Trusted by the team. Built for the shift.<\/p>","fine_print":"","button_1_text":"WOMEN","button_1_link":"shopify:\/\/collections\/womens-scrubs","button_1_style":"button button-outline-white","button_2_text":"MEN","button_2_link":"shopify:\/\/collections\/mens-scrubs","button_2_style":"button button-outline-white"}},"collection_list_carousel_nPENBw":{"type":"collection-list-carousel","blocks":{"collection_DXNpV7":{"type":"collection","settings":{"collection":"womens-scrub-tops","custom_title":"SCRUB TOPS","image":"shopify:\/\/shop_images\/ck-cat-tops-20260602.jpg"}},"collection_PAMWTm":{"type":"collection","settings":{"collection":"womens-scrub-pants","custom_title":"SCRUB PANTS","image":"shopify:\/\/shop_images\/ck-cat-pants-20260602.jpg"}},"collection_xYr9yB":{"type":"collection","settings":{"collection":"womens-scrubs-sets","custom_title":"SCRUB SETS","image":"shopify:\/\/shop_images\/ck-cat-sets-20260602.jpg"}},"collection_638Rjx":{"type":"collection","settings":{"collection":"womens-print-scrubs","custom_title":"PRINTS","image":"shopify:\/\/shop_images\/ck-cat-prints-20260602.jpg"}},"collection_nVPiDg":{"type":"collection","settings":{"collection":"womens-scrub-jackets","custom_title":"SCRUB JACKETS","image":"shopify:\/\/shop_images\/ck-cat-jackets-20260602.jpg"}},"collection_gykBMi":{"type":"collection","settings":{"collection":"womens-lab-coats","custom_title":"LAB COATS","image":"shopify:\/\/shop_images\/ck-cat-labcoats-20260602.jpg"}}},"block_order":["collection_DXNpV7","collection_PAMWTm","collection_xYr9yB","collection_638Rjx","collection_nVPiDg","collection_gykBMi"],"name":"Collection List Carousel","settings":{"color_scheme":"","use_max_width":true,"eyebrow":"","heading":"Shop by Category","richtext":"","carousel_loop":true,"slides_per_view_tablet":3,"slides_per_view_laptop":4,"slides_per_view_desktop":5}},"shop_by_color_hQkMdR":{"type":"shop-by-color","blocks":{"collection_wNAa4N":{"type":"collection","settings":{"collection":"womens-black-scrubs","label_override":"","color_override":""}},"collection_ppWCyc":{"type":"collection","settings":{"collection":"womens-navy-blue-scrubs","label_override":"","color_override":""}},"collection_473aAk":{"type":"collection","settings":{"collection":"womens-grey-scrubs","label_override":"","color_override":""}},"collection_4fVMWM":{"type":"collection","settings":{"collection":"womens-royal-blue-scrubs","label_override":"","color_override":""}},"collection_g8M6GH":{"type":"collection","settings":{"collection":"womens-green-scrubs","label_override":"","color_override":""}},"collection_aixhjE":{"type":"collection","settings":{"collection":"womens-ceil-blue-scrubs","label_override":"","color_override":""}},"collection_DKjTr8":{"type":"collection","settings":{"collection":"womens-white-scrubs","label_override":"","color_override":""}},"collection_Gd6QCQ":{"type":"collection","settings":{"collection":"womens-khaki-scrubs","label_override":"","color_override":""}},"collection_bCc64E":{"type":"collection","settings":{"collection":"womens-caribbean-blue-scrubs","label_override":"","color_override":""}},"collection_q3QcxB":{"type":"collection","disabled":true,"settings":{"collection":"unisex-scrubs-ceil-blue-scrubs","label_override":"","color_override":""}},"collection_t3mNGL":{"type":"collection","disabled":true,"settings":{"collection":"unisex-scrubs-black-scrubs","label_override":"","color_override":""}},"collection_3Ftjrc":{"type":"collection","disabled":true,"settings":{"collection":"unisex-scrubs-white-scrubs","label_override":"","color_override":""}},"collection_WzFker":{"type":"collection","disabled":true,"settings":{"collection":"red-scrubs","label_override":"","color_override":""}},"collection_Lyyk9Q":{"type":"collection","disabled":true,"settings":{"collection":"unisex-wine-scrubs","label_override":"","color_override":""}}},"block_order":["collection_wNAa4N","collection_ppWCyc","collection_473aAk","collection_4fVMWM","collection_g8M6GH","collection_aixhjE","collection_DKjTr8","collection_Gd6QCQ","collection_bCc64E","collection_q3QcxB","collection_t3mNGL","collection_3Ftjrc","collection_WzFker","collection_Lyyk9Q"],"name":"Shop by Color","settings":{"color_scheme":"","eyebrow":"","heading":"Shop by Color","richtext":"","products_to_show":10,"loop":true,"button_text":"Shop this color","slides_per_view_tablet":4,"slides_per_view_laptop":5,"slides_per_view_desktop":5}},"image_collage_LRGgMz":{"type":"image-collage","blocks":{"content_kD3Dp4":{"type":"content","settings":{"color_scheme":"scheme-dark","image":"shopify:\/\/shop_images\/achieve-women-3x4.jpg","overlay_color":"#000000","overlay_opacity":0,"eyebrow":"","heading":"Activewear Comfort.","button_1_text":"ACHIEVE WOMEN","button_1_link":"shopify:\/\/collections\/achieve-womens-scrubs","button_1_style":"button button-outline-white","button_2_text":"","button_2_link":"shopify:\/\/collections","button_2_style":"button button-outline-white"}},"content_3c7rxH":{"type":"content","settings":{"color_scheme":"scheme-dark","image":"shopify:\/\/shop_images\/achieve-men-3x4.jpg","overlay_color":"#000000","overlay_opacity":0,"eyebrow":"","heading":"Reimagined for the Shift.","button_1_text":"ACHIEVE MEN","button_1_link":"shopify:\/\/collections\/achieve-mens-scrubs","button_1_style":"button button-outline-white","button_2_text":"","button_2_link":"","button_2_style":"button button-outline-white"}}},"block_order":["content_kD3Dp4","content_3c7rxH"],"name":"Image Collage","settings":{"color_scheme":"scheme-default","add_padding":false,"width":"full-width","section_height":80}},"featured_collection_dkyAD7":{"type":"featured-collection","name":"Featured collection","settings":{"color_scheme":"","heading":"New Arrivals","text":"","collection":"womens-best-sellers","products_to_show":16,"loop":true,"button_link":"shopify:\/\/collections\/womens-new-arrivals","button_text":"Shop All","slides_per_view_tablet":3,"slides_per_view_laptop":4,"slides_per_view_desktop":5}},"shop_the_look_FDeEzw":{"type":"shop-the-look","blocks":{"slide_dwD3Nw":{"type":"slide","settings":{"image":"shopify:\/\/shop_images\/CK840_IRON_shop-the-look.jpg","product_1":"form-by-cherokee-womens-curved-hemline-v-neck-top-ckck840","product_1_color_label":"Iron","product_2":"womens-mid-rise-tapered-leg-drawstring-scrub-pant-ckck095","product_2_color_label":"Iron","product_3":"womens-long-sleeve-underscrub-knit-tee-ckck773","product_3_color_label":"black"}},"slide_CKcXiK":{"type":"slide","settings":{"image":"shopify:\/\/shop_images\/WW695_CAR_shop-the-look.jpg","product_1":"mens-utility-4-pocket-v-neck-scrub-top-ckww695","product_1_color_label":"Caribbean Blue","product_2":"mens-tapered-leg-zip-fly-drawstring-scrub-pant-ckww190","product_2_color_label":"Caribbean Blue","product_3":"mens-long-sleeve-solid-underscrub-t-shirt-ckww700","product_3_color_label":"White"}},"slide_Kzjbkd":{"type":"slide","settings":{"image":"shopify:\/\/shop_images\/shop-the-look.jpg","product_1":"womens-shaped-3-pocket-mock-wrap-scrub-top-ckww610","product_1_color_label":"Grape","product_2":"womens-drawstring-flare-scrub-pant-ckww120","product_2_color_label":"Grape","product_3":"womens-snap-front-crew-neck-scrub-jacket-ckww310","product_3_color_label":"Grape"}}},"block_order":["slide_dwD3Nw","slide_CKcXiK","slide_Kzjbkd"],"name":"Shop the Look","settings":{"color_scheme":"scheme-light-grey-blue-heading","card_color_scheme":"scheme-default","heading":"Shop the Look","richtext":""}},"article_carousel_rNiaNf":{"type":"article-carousel","name":"Articles carousel","settings":{"color_scheme":"scheme-aed956a8-0590-4fa9-8aea-ec51184aeac3","heading":"From the blog","text":"","hide_header":false,"loop":true,"blog":"scrub-hub","article_list":[],"show_image":true,"show_date":true,"show_author":false,"button_link":"shopify:\/\/blogs\/scrub-hub","button_text":"View all","slides_per_view_mobile":1.3,"slides_per_view_tablet":2,"slides_per_view_laptop":3,"slides_per_view_desktop":3}},"media_with_text_CxALfq":{"type":"media-with-text","disabled":true,"name":"Media with Text","settings":{"color_scheme":"","add_padding":true,"use_max_width":true,"image_position":"right","image":"shopify:\/\/shop_images\/media-with-text.jpg","eyebrow":"","content_image":"shopify:\/\/shop_images\/logo-image-color.png","content_image_max_height":65,"heading":"","richtext":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>","button_text":"Button","button_link":"","button_style":"button"}},"collapsible_content_i6KyG3":{"type":"collapsible-content","blocks":{"item_DJaanb":{"type":"item","settings":{"heading":"Sample heading","content":"Sample content"}},"faq_item_aaArkw":{"type":"item","settings":{"heading":"How do I find the right size?","content":"Lorem <strong>ipsum <\/strong>dolor sit <a href=\"\/collections\" title=\"All collections\">amet,<\/a> consectetur adipiscing elit, sed do eiusmod tempor incidid<em>unt ut labore et do<\/em>lore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."}},"faq_item_cCqEw6":{"type":"item","settings":{"heading":"Are there any items I cannot return?","content":"Sample answer"}},"faq_item_6iJDQf":{"type":"item","settings":{"heading":"Is there a limit to the number of characters or words that can be embroidered?","content":"Sample answer"}},"faq_item_X3Nwj8":{"type":"item","settings":{"heading":"Can I have my own personal logo or design added?","content":"Sample answer"}},"faq_item_mG99EQ":{"type":"item","settings":{"heading":"How long does embroidery take?","content":"Sample answer"}},"faq_item_gQpjwn":{"type":"item","settings":{"heading":"Can I order embroidered products in different styles, colors and sizes for a large team?","content":"Sample answer"}}},"block_order":["item_DJaanb","faq_item_aaArkw","faq_item_cCqEw6","faq_item_6iJDQf","faq_item_X3Nwj8","faq_item_mG99EQ","faq_item_gQpjwn"],"disabled":true,"name":"Collapsible Content","settings":{"color_scheme":"scheme-0d9bed0c-0f1f-4f9d-99af-d15d3a707bfd","heading":"Frequently Asked Questions","text":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <\/p>","button_text":"Button","button_link":"shopify:\/\/pages\/faq","button_style":"button button-outline-black"}},"icon_list_wJUJUG":{"type":"icon-list","blocks":{"item_HtAWcz":{"type":"item","settings":{"icon":"shopify:\/\/shop_images\/performance-knit-fabric.png","title":"Label","text":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/p>","link_text":"Button","link_url":""}},"item_97BBCj":{"type":"item","settings":{"icon":"shopify:\/\/shop_images\/anti-wrinkle.png","title":"Label","text":"<p>Lorem ipsum dolor <\/p>","link_text":"Button","link_url":""}},"item_Lzj9Wf":{"type":"item","settings":{"icon":"shopify:\/\/shop_images\/coolmax.png","title":"Label","text":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/p>","link_text":"Button","link_url":""}},"item_xwDifW":{"type":"item","settings":{"icon":"shopify:\/\/shop_images\/360-stretch.png","title":"Label","text":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/p>","link_text":"Button","link_url":""}}},"block_order":["item_HtAWcz","item_97BBCj","item_Lzj9Wf","item_xwDifW"],"disabled":true,"name":"Icon List","settings":{"color_scheme":"scheme-default","eyebrow":"Eyebrow","heading":"Headline","icon_height_desktop":60,"icon_height_mobile":40,"image_position":"left","mobile_layout":"list","mobile_align":"left","carousel_loop":false}},"icon_list_YR8M8A":{"type":"icon-list","blocks":{"item_GQrYRh":{"type":"item","settings":{"icon":"shopify:\/\/shop_images\/icon-wicking.svg","title":"Label","text":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/p>","link_text":"Button","link_url":""}},"item_bWqWct":{"type":"item","settings":{"icon":"shopify:\/\/shop_images\/icon-wicking.svg","title":"Label","text":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/p>","link_text":"Button","link_url":""}},"item_Lfthmk":{"type":"item","settings":{"icon":"shopify:\/\/shop_images\/icon-wicking.svg","title":"Label","text":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/p>","link_text":"Button","link_url":""}},"item_eVHMyg":{"type":"item","settings":{"icon":"shopify:\/\/shop_images\/icon-wicking.svg","title":"Label","text":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/p>","link_text":"Button","link_url":""}}},"block_order":["item_GQrYRh","item_bWqWct","item_Lfthmk","item_eVHMyg"],"disabled":true,"name":"Icon List","settings":{"color_scheme":"scheme-default","eyebrow":"Eyebrow","heading":"Headline","icon_height_desktop":40,"icon_height_mobile":40,"section_image":"shopify:\/\/shop_images\/icon-list-image.jpg","image_position":"left","mobile_layout":"list","mobile_align":"left","carousel_loop":false}},"featured_collection_rr4hU6":{"type":"featured-collection","name":"Featured collection","settings":{"color_scheme":"","heading":"Best Sellers","text":"","collection":"womens-best-sellers","products_to_show":16,"loop":true,"button_link":"shopify:\/\/collections\/womens-best-sellers","button_text":"Shop All","slides_per_view_tablet":3,"slides_per_view_laptop":4,"slides_per_view_desktop":5}},"177748680235ee7db2":{"type":"apps","disabled":true,"name":"Yotpo Instagram","settings":{"section_id":"","color_scheme":"scheme-0d9bed0c-0f1f-4f9d-99af-d15d3a707bfd","max_width":"container","max_width_custom":"","side_padding":true,"padding_top":"large","padding_bottom":"large","min_height":"","heading":"@cherokeeuniforms","heading_size":"2","align_text":"left"}},"yotpo_reviews_carousel_C6NwQC":{"type":"yotpo-reviews-carousel","name":"Yotpo Reviews Carousel","settings":{"heading":"Backed by real reviews","instance_id":"1319642","widget_id":"uYOSEsQmXRjRHq6WfsKJSXEDdP1YYdD6NEdP6FQf"}}},"order":["hero_banner_4iYHXM","collection_list_carousel_nPENBw","shop_by_color_hQkMdR","image_collage_LRGgMz","featured_collection_dkyAD7","shop_the_look_FDeEzw","article_carousel_rNiaNf","media_with_text_CxALfq","collapsible_content_i6KyG3","icon_list_wJUJUG","icon_list_YR8M8A","featured_collection_rr4hU6","177748680235ee7db2","yotpo_reviews_carousel_C6NwQC"]}
+{
+    "sections": {
+        "hero_banner_4iYHXM": {
+            "type": "hero-banner",
+            "settings": {
+                "color_scheme": "scheme-dark",
+                "transparent_header": true,
+                "width": "full-width",
+                "add_padding": false,
+                "section_height": 75,
+                "horizontal_position": "justify-center",
+                "vertical_position": "items-center",
+                "text_alignment": "text-center",
+                "video": "shopify:\/\/files\/videos\/ck-hero-brand-film-20260603.mp4",
+                "mobile_video": "shopify:\/\/files\/videos\/ck-mobile-hero-brand-film-20260603.mp4",
+                "overlay_color": "#000000",
+                "overlay_opacity": 10,
+                "eyebrow": "",
+                "heading": "ONE FOR ALL",
+                "use_h1": false,
+                "heading_tag": "1",
+                "content_image_max_height": 100,
+                "richtext": "<p>Trusted by the team. Built for the shift.<\/p>",
+                "fine_print": "",
+                "button_1_text": "WOMEN",
+                "button_1_link": "shopify:\/\/collections\/womens-scrubs",
+                "button_1_style": "button button-outline-white",
+                "button_2_text": "MEN",
+                "button_2_link": "shopify:\/\/collections\/mens-scrubs",
+                "button_2_style": "button button-outline-white"
+            }
+        },
+        "collection_list_carousel_nPENBw": {
+            "type": "collection-list-carousel",
+            "blocks": {
+                "collection_DXNpV7": {
+                    "type": "collection",
+                    "settings": {
+                        "collection": "womens-scrub-tops",
+                        "custom_title": "SCRUB TOPS",
+                        "image": "shopify:\/\/shop_images\/ck-cat-tops-20260602.jpg"
+                    }
+                },
+                "collection_PAMWTm": {
+                    "type": "collection",
+                    "settings": {
+                        "collection": "womens-scrub-pants",
+                        "custom_title": "SCRUB PANTS",
+                        "image": "shopify:\/\/shop_images\/ck-cat-pants-20260602.jpg"
+                    }
+                },
+                "collection_xYr9yB": {
+                    "type": "collection",
+                    "settings": {
+                        "collection": "womens-scrubs-sets",
+                        "custom_title": "SCRUB SETS",
+                        "image": "shopify:\/\/shop_images\/ck-cat-sets-20260602.jpg"
+                    }
+                },
+                "collection_638Rjx": {
+                    "type": "collection",
+                    "settings": {
+                        "collection": "womens-print-scrubs",
+                        "custom_title": "PRINTS",
+                        "image": "shopify:\/\/shop_images\/ck-cat-prints-20260602.jpg"
+                    }
+                },
+                "collection_nVPiDg": {
+                    "type": "collection",
+                    "settings": {
+                        "collection": "womens-scrub-jackets",
+                        "custom_title": "SCRUB JACKETS",
+                        "image": "shopify:\/\/shop_images\/ck-cat-jackets-20260602.jpg"
+                    }
+                },
+                "collection_gykBMi": {
+                    "type": "collection",
+                    "settings": {
+                        "collection": "womens-lab-coats",
+                        "custom_title": "LAB COATS",
+                        "image": "shopify:\/\/shop_images\/ck-cat-labcoats-20260602.jpg"
+                    }
+                }
+            },
+            "block_order": [
+                "collection_DXNpV7",
+                "collection_PAMWTm",
+                "collection_xYr9yB",
+                "collection_638Rjx",
+                "collection_nVPiDg",
+                "collection_gykBMi"
+            ],
+            "name": "Collection List Carousel",
+            "settings": {
+                "color_scheme": "",
+                "use_max_width": true,
+                "eyebrow": "",
+                "heading": "Shop by Category",
+                "richtext": "",
+                "carousel_loop": true,
+                "slides_per_view_tablet": 3,
+                "slides_per_view_laptop": 4,
+                "slides_per_view_desktop": 5
+            }
+        },
+        "shop_by_color_hQkMdR": {
+            "type": "shop-by-color",
+            "blocks": {
+                "collection_wNAa4N": {
+                    "type": "collection",
+                    "settings": {
+                        "collection": "womens-black-scrubs",
+                        "label_override": "",
+                        "color_override": ""
+                    }
+                },
+                "collection_ppWCyc": {
+                    "type": "collection",
+                    "settings": {
+                        "collection": "womens-navy-blue-scrubs",
+                        "label_override": "",
+                        "color_override": ""
+                    }
+                },
+                "collection_473aAk": {
+                    "type": "collection",
+                    "settings": {
+                        "collection": "womens-grey-scrubs",
+                        "label_override": "",
+                        "color_override": ""
+                    }
+                },
+                "collection_4fVMWM": {
+                    "type": "collection",
+                    "settings": {
+                        "collection": "womens-royal-blue-scrubs",
+                        "label_override": "",
+                        "color_override": ""
+                    }
+                },
+                "collection_g8M6GH": {
+                    "type": "collection",
+                    "settings": {
+                        "collection": "womens-green-scrubs",
+                        "label_override": "",
+                        "color_override": ""
+                    }
+                },
+                "collection_aixhjE": {
+                    "type": "collection",
+                    "settings": {
+                        "collection": "womens-ceil-blue-scrubs",
+                        "label_override": "",
+                        "color_override": ""
+                    }
+                },
+                "collection_DKjTr8": {
+                    "type": "collection",
+                    "settings": {
+                        "collection": "womens-white-scrubs",
+                        "label_override": "",
+                        "color_override": ""
+                    }
+                },
+                "collection_Gd6QCQ": {
+                    "type": "collection",
+                    "settings": {
+                        "collection": "womens-khaki-scrubs",
+                        "label_override": "",
+                        "color_override": ""
+                    }
+                },
+                "collection_bCc64E": {
+                    "type": "collection",
+                    "settings": {
+                        "collection": "womens-caribbean-blue-scrubs",
+                        "label_override": "",
+                        "color_override": ""
+                    }
+                },
+                "collection_q3QcxB": {
+                    "type": "collection",
+                    "disabled": true,
+                    "settings": {
+                        "collection": "unisex-scrubs-ceil-blue-scrubs",
+                        "label_override": "",
+                        "color_override": ""
+                    }
+                },
+                "collection_t3mNGL": {
+                    "type": "collection",
+                    "disabled": true,
+                    "settings": {
+                        "collection": "unisex-scrubs-black-scrubs",
+                        "label_override": "",
+                        "color_override": ""
+                    }
+                },
+                "collection_3Ftjrc": {
+                    "type": "collection",
+                    "disabled": true,
+                    "settings": {
+                        "collection": "unisex-scrubs-white-scrubs",
+                        "label_override": "",
+                        "color_override": ""
+                    }
+                },
+                "collection_WzFker": {
+                    "type": "collection",
+                    "disabled": true,
+                    "settings": {
+                        "collection": "red-scrubs",
+                        "label_override": "",
+                        "color_override": ""
+                    }
+                },
+                "collection_Lyyk9Q": {
+                    "type": "collection",
+                    "disabled": true,
+                    "settings": {
+                        "collection": "unisex-wine-scrubs",
+                        "label_override": "",
+                        "color_override": ""
+                    }
+                }
+            },
+            "block_order": [
+                "collection_wNAa4N",
+                "collection_ppWCyc",
+                "collection_473aAk",
+                "collection_4fVMWM",
+                "collection_g8M6GH",
+                "collection_aixhjE",
+                "collection_DKjTr8",
+                "collection_Gd6QCQ",
+                "collection_bCc64E",
+                "collection_q3QcxB",
+                "collection_t3mNGL",
+                "collection_3Ftjrc",
+                "collection_WzFker",
+                "collection_Lyyk9Q"
+            ],
+            "name": "Shop by Color",
+            "settings": {
+                "color_scheme": "",
+                "eyebrow": "",
+                "heading": "Shop by Color",
+                "richtext": "",
+                "products_to_show": 10,
+                "loop": true,
+                "button_text": "Shop this color",
+                "slides_per_view_tablet": 4,
+                "slides_per_view_laptop": 5,
+                "slides_per_view_desktop": 5
+            }
+        },
+        "image_collage_LRGgMz": {
+            "type": "image-collage",
+            "blocks": {
+                "content_kD3Dp4": {
+                    "type": "content",
+                    "settings": {
+                        "color_scheme": "scheme-dark",
+                        "image": "shopify:\/\/shop_images\/achieve-women-3x4.jpg",
+                        "overlay_color": "#000000",
+                        "overlay_opacity": 0,
+                        "eyebrow": "",
+                        "heading": "Activewear Comfort.",
+                        "button_1_text": "ACHIEVE WOMEN",
+                        "button_1_link": "shopify:\/\/collections\/achieve-womens-scrubs",
+                        "button_1_style": "button button-outline-white",
+                        "button_2_text": "",
+                        "button_2_link": "shopify:\/\/collections",
+                        "button_2_style": "button button-outline-white"
+                    }
+                },
+                "content_3c7rxH": {
+                    "type": "content",
+                    "settings": {
+                        "color_scheme": "scheme-dark",
+                        "image": "shopify:\/\/shop_images\/achieve-men-3x4.jpg",
+                        "overlay_color": "#000000",
+                        "overlay_opacity": 0,
+                        "eyebrow": "",
+                        "heading": "Reimagined for the Shift.",
+                        "button_1_text": "ACHIEVE MEN",
+                        "button_1_link": "shopify:\/\/collections\/achieve-mens-scrubs",
+                        "button_1_style": "button button-outline-white",
+                        "button_2_text": "",
+                        "button_2_link": "",
+                        "button_2_style": "button button-outline-white"
+                    }
+                }
+            },
+            "block_order": [
+                "content_kD3Dp4",
+                "content_3c7rxH"
+            ],
+            "name": "Image Collage",
+            "settings": {
+                "color_scheme": "scheme-default",
+                "add_padding": false,
+                "width": "full-width",
+                "section_height": 80
+            }
+        },
+        "featured_collection_dkyAD7": {
+            "type": "featured-collection",
+            "name": "Featured collection",
+            "settings": {
+                "color_scheme": "",
+                "heading": "New Arrivals",
+                "text": "",
+                "collection": "womens-best-sellers",
+                "products_to_show": 16,
+                "loop": true,
+                "button_link": "shopify:\/\/collections\/womens-new-arrivals",
+                "button_text": "Shop All",
+                "slides_per_view_tablet": 3,
+                "slides_per_view_laptop": 4,
+                "slides_per_view_desktop": 5
+            }
+        },
+        "shop_the_look_FDeEzw": {
+            "type": "shop-the-look",
+            "blocks": {
+                "slide_dwD3Nw": {
+                    "type": "slide",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/CK840_IRON_shop-the-look.jpg",
+                        "product_1": "form-by-cherokee-womens-curved-hemline-v-neck-top-ckck840",
+                        "product_1_color_label": "Iron",
+                        "product_2": "womens-mid-rise-tapered-leg-drawstring-scrub-pant-ckck095",
+                        "product_2_color_label": "Iron",
+                        "product_3": "womens-long-sleeve-underscrub-knit-tee-ckck773",
+                        "product_3_color_label": "black"
+                    }
+                },
+                "slide_CKcXiK": {
+                    "type": "slide",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/WW695_CAR_shop-the-look.jpg",
+                        "product_1": "mens-utility-4-pocket-v-neck-scrub-top-ckww695",
+                        "product_1_color_label": "Caribbean Blue",
+                        "product_2": "mens-tapered-leg-zip-fly-drawstring-scrub-pant-ckww190",
+                        "product_2_color_label": "Caribbean Blue",
+                        "product_3": "mens-long-sleeve-solid-underscrub-t-shirt-ckww700",
+                        "product_3_color_label": "White"
+                    }
+                },
+                "slide_Kzjbkd": {
+                    "type": "slide",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/shop-the-look.jpg",
+                        "product_1": "womens-shaped-3-pocket-mock-wrap-scrub-top-ckww610",
+                        "product_1_color_label": "Grape",
+                        "product_2": "womens-drawstring-flare-scrub-pant-ckww120",
+                        "product_2_color_label": "Grape",
+                        "product_3": "womens-snap-front-crew-neck-scrub-jacket-ckww310",
+                        "product_3_color_label": "Grape"
+                    }
+                }
+            },
+            "block_order": [
+                "slide_dwD3Nw",
+                "slide_CKcXiK",
+                "slide_Kzjbkd"
+            ],
+            "name": "Shop the Look",
+            "settings": {
+                "color_scheme": "scheme-light-grey-blue-heading",
+                "card_color_scheme": "scheme-default",
+                "heading": "Shop the Look",
+                "richtext": ""
+            }
+        },
+        "article_carousel_rNiaNf": {
+            "type": "article-carousel",
+            "name": "Articles carousel",
+            "settings": {
+                "color_scheme": "scheme-aed956a8-0590-4fa9-8aea-ec51184aeac3",
+                "heading": "From the blog",
+                "text": "",
+                "hide_header": false,
+                "loop": true,
+                "blog": "scrub-hub",
+                "article_list": [],
+                "show_image": true,
+                "show_date": true,
+                "show_author": false,
+                "button_link": "shopify:\/\/blogs\/scrub-hub",
+                "button_text": "View all",
+                "slides_per_view_mobile": 1.3,
+                "slides_per_view_tablet": 2,
+                "slides_per_view_laptop": 3,
+                "slides_per_view_desktop": 3
+            }
+        },
+        "media_with_text_CxALfq": {
+            "type": "media-with-text",
+            "disabled": true,
+            "name": "Media with Text",
+            "settings": {
+                "color_scheme": "",
+                "add_padding": true,
+                "use_max_width": true,
+                "image_position": "right",
+                "image": "shopify:\/\/shop_images\/media-with-text.jpg",
+                "eyebrow": "",
+                "content_image": "shopify:\/\/shop_images\/logo-image-color.png",
+                "content_image_max_height": 65,
+                "heading": "",
+                "richtext": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
+                "button_text": "Button",
+                "button_link": "",
+                "button_style": "button"
+            }
+        },
+        "collapsible_content_i6KyG3": {
+            "type": "collapsible-content",
+            "blocks": {
+                "item_DJaanb": {
+                    "type": "item",
+                    "settings": {
+                        "heading": "Sample heading",
+                        "content": "Sample content"
+                    }
+                },
+                "faq_item_aaArkw": {
+                    "type": "item",
+                    "settings": {
+                        "heading": "How do I find the right size?",
+                        "content": "Lorem <strong>ipsum <\/strong>dolor sit <a href=\"\/collections\" title=\"All collections\">amet,<\/a> consectetur adipiscing elit, sed do eiusmod tempor incidid<em>unt ut labore et do<\/em>lore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                    }
+                },
+                "faq_item_cCqEw6": {
+                    "type": "item",
+                    "settings": {
+                        "heading": "Are there any items I cannot return?",
+                        "content": "Sample answer"
+                    }
+                },
+                "faq_item_6iJDQf": {
+                    "type": "item",
+                    "settings": {
+                        "heading": "Is there a limit to the number of characters or words that can be embroidered?",
+                        "content": "Sample answer"
+                    }
+                },
+                "faq_item_X3Nwj8": {
+                    "type": "item",
+                    "settings": {
+                        "heading": "Can I have my own personal logo or design added?",
+                        "content": "Sample answer"
+                    }
+                },
+                "faq_item_mG99EQ": {
+                    "type": "item",
+                    "settings": {
+                        "heading": "How long does embroidery take?",
+                        "content": "Sample answer"
+                    }
+                },
+                "faq_item_gQpjwn": {
+                    "type": "item",
+                    "settings": {
+                        "heading": "Can I order embroidered products in different styles, colors and sizes for a large team?",
+                        "content": "Sample answer"
+                    }
+                }
+            },
+            "block_order": [
+                "item_DJaanb",
+                "faq_item_aaArkw",
+                "faq_item_cCqEw6",
+                "faq_item_6iJDQf",
+                "faq_item_X3Nwj8",
+                "faq_item_mG99EQ",
+                "faq_item_gQpjwn"
+            ],
+            "disabled": true,
+            "name": "Collapsible Content",
+            "settings": {
+                "color_scheme": "scheme-0d9bed0c-0f1f-4f9d-99af-d15d3a707bfd",
+                "heading": "Frequently Asked Questions",
+                "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <\/p>",
+                "button_text": "Button",
+                "button_link": "shopify:\/\/pages\/faq",
+                "button_style": "button button-outline-black"
+            }
+        },
+        "icon_list_wJUJUG": {
+            "type": "icon-list",
+            "blocks": {
+                "item_HtAWcz": {
+                    "type": "item",
+                    "settings": {
+                        "icon": "shopify:\/\/shop_images\/performance-knit-fabric.png",
+                        "title": "Label",
+                        "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/p>",
+                        "link_text": "Button",
+                        "link_url": ""
+                    }
+                },
+                "item_97BBCj": {
+                    "type": "item",
+                    "settings": {
+                        "icon": "shopify:\/\/shop_images\/anti-wrinkle.png",
+                        "title": "Label",
+                        "text": "<p>Lorem ipsum dolor <\/p>",
+                        "link_text": "Button",
+                        "link_url": ""
+                    }
+                },
+                "item_Lzj9Wf": {
+                    "type": "item",
+                    "settings": {
+                        "icon": "shopify:\/\/shop_images\/coolmax.png",
+                        "title": "Label",
+                        "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/p>",
+                        "link_text": "Button",
+                        "link_url": ""
+                    }
+                },
+                "item_xwDifW": {
+                    "type": "item",
+                    "settings": {
+                        "icon": "shopify:\/\/shop_images\/360-stretch.png",
+                        "title": "Label",
+                        "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/p>",
+                        "link_text": "Button",
+                        "link_url": ""
+                    }
+                }
+            },
+            "block_order": [
+                "item_HtAWcz",
+                "item_97BBCj",
+                "item_Lzj9Wf",
+                "item_xwDifW"
+            ],
+            "disabled": true,
+            "name": "Icon List",
+            "settings": {
+                "color_scheme": "scheme-default",
+                "eyebrow": "Eyebrow",
+                "heading": "Headline",
+                "icon_height_desktop": 60,
+                "icon_height_mobile": 40,
+                "image_position": "left",
+                "mobile_layout": "list",
+                "mobile_align": "left",
+                "carousel_loop": false
+            }
+        },
+        "icon_list_YR8M8A": {
+            "type": "icon-list",
+            "blocks": {
+                "item_GQrYRh": {
+                    "type": "item",
+                    "settings": {
+                        "icon": "shopify:\/\/shop_images\/icon-wicking.svg",
+                        "title": "Label",
+                        "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/p>",
+                        "link_text": "Button",
+                        "link_url": ""
+                    }
+                },
+                "item_bWqWct": {
+                    "type": "item",
+                    "settings": {
+                        "icon": "shopify:\/\/shop_images\/icon-wicking.svg",
+                        "title": "Label",
+                        "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/p>",
+                        "link_text": "Button",
+                        "link_url": ""
+                    }
+                },
+                "item_Lfthmk": {
+                    "type": "item",
+                    "settings": {
+                        "icon": "shopify:\/\/shop_images\/icon-wicking.svg",
+                        "title": "Label",
+                        "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/p>",
+                        "link_text": "Button",
+                        "link_url": ""
+                    }
+                },
+                "item_eVHMyg": {
+                    "type": "item",
+                    "settings": {
+                        "icon": "shopify:\/\/shop_images\/icon-wicking.svg",
+                        "title": "Label",
+                        "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/p>",
+                        "link_text": "Button",
+                        "link_url": ""
+                    }
+                }
+            },
+            "block_order": [
+                "item_GQrYRh",
+                "item_bWqWct",
+                "item_Lfthmk",
+                "item_eVHMyg"
+            ],
+            "disabled": true,
+            "name": "Icon List",
+            "settings": {
+                "color_scheme": "scheme-default",
+                "eyebrow": "Eyebrow",
+                "heading": "Headline",
+                "icon_height_desktop": 40,
+                "icon_height_mobile": 40,
+                "section_image": "shopify:\/\/shop_images\/icon-list-image.jpg",
+                "image_position": "left",
+                "mobile_layout": "list",
+                "mobile_align": "left",
+                "carousel_loop": false
+            }
+        },
+        "featured_collection_rr4hU6": {
+            "type": "featured-collection",
+            "name": "Featured collection",
+            "settings": {
+                "color_scheme": "",
+                "heading": "Best Sellers",
+                "text": "",
+                "collection": "womens-best-sellers",
+                "products_to_show": 16,
+                "loop": true,
+                "button_link": "shopify:\/\/collections\/womens-best-sellers",
+                "button_text": "Shop All",
+                "slides_per_view_tablet": 3,
+                "slides_per_view_laptop": 4,
+                "slides_per_view_desktop": 5
+            }
+        },
+        "177748680235ee7db2": {
+            "type": "apps",
+            "disabled": true,
+            "name": "Yotpo Instagram",
+            "settings": {
+                "section_id": "",
+                "color_scheme": "scheme-0d9bed0c-0f1f-4f9d-99af-d15d3a707bfd",
+                "max_width": "container",
+                "max_width_custom": "",
+                "side_padding": true,
+                "padding_top": "large",
+                "padding_bottom": "large",
+                "min_height": "",
+                "heading": "@cherokeeuniforms",
+                "heading_size": "2",
+                "align_text": "left"
+            }
+        },
+        "yotpo_reviews_carousel_C6NwQC": {
+            "type": "yotpo-reviews-carousel",
+            "name": "Yotpo Reviews Carousel",
+            "settings": {
+                "heading": "Backed by real reviews",
+                "instance_id": "1319642",
+                "widget_id": "uYOSEsQmXRjRHq6WfsKJSXEDdP1YYdD6NEdP6FQf"
+            }
+        }
+    },
+    "order": [
+        "hero_banner_4iYHXM",
+        "collection_list_carousel_nPENBw",
+        "shop_by_color_hQkMdR",
+        "image_collage_LRGgMz",
+        "featured_collection_dkyAD7",
+        "shop_the_look_FDeEzw",
+        "article_carousel_rNiaNf",
+        "media_with_text_CxALfq",
+        "collapsible_content_i6KyG3",
+        "icon_list_wJUJUG",
+        "icon_list_YR8M8A",
+        "featured_collection_rr4hU6",
+        "177748680235ee7db2",
+        "yotpo_reviews_carousel_C6NwQC"
+    ]
+}
