@@ -4,12 +4,14 @@
   Rendered inside <product-fetcher>, so variant state always matches the main button.
 
   Behavior:
-    - No variant selected: shows "Select size" button that scrolls to variant options
-    - Variant available: shows bag icon + "Add to bag", submits the main product form
-    - Variant sold out (fully picked): bar is hidden — the BIS panel owns that state
+    - Picks incomplete: button renders disabled (<product-fetcher> gates it)
+    - Variant available + fully picked: enabled bag icon + "Add to bag",
+      submits the main product form
+    - Fully picked but sold out / no variant record: bar is hidden — the BIS
+      panel / the main form's unavailable notice owns that state
 
   The bar carries [data-product-fetcher-atc] so <product-fetcher> hides it
-  exactly when the back-in-stock state is active (full picks + unavailable).
+  exactly when the back-in-stock or unavailable state is active.
   The server can't decide this itself: variant is Shopify's auto-resolved
   variant, which can be sold out mid-flow while the shopper's picks are
   still incomplete.
@@ -54,15 +56,13 @@
   border-t border-grey translate-y-full transition-transform [&[visible]]:translate-y-0" >
     <div class="group/ajax-cart-product-form px-gutter py-3">
       {%- comment -%}
-        variant is only ever null here when the picked option combination
-        has no variant record (Shopify resolves option_values to nil) —
-        mirror product-form's unavailable notice instead of the buy button.
+        Rendered even when variant is null: a nil variant usually just means
+        the picks are partial and Shopify's auto-defaulted size doesn't exist
+        for the picked color — <product-fetcher> keeps the button disabled.
+        When the shopper has FULLY picked a non-existent combination, the
+        gate hides this whole bar (it carries [data-product-fetcher-atc]) and
+        the main form's unavailable notice owns that state.
       {%- endcomment -%}
-      {%- if variant == null -%}
-        <div class="bg-grey-light rounded-theme-sm p-sm fs-body-md text-center">
-          {{- 'products.product.combination_unavailable' | t -}}
-        </div>
-      {%- else -%}
         <button
           type="submit"
           name="add"
@@ -79,6 +79,5 @@
             {{- 'products.product.adding_to_cart' | t -}}
           </span>
         </button>
-      {%- endif -%}
     </div>
   </sticky-add-to-cart>

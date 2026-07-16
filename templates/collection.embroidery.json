@@ -14,7 +14,7 @@
       "settings": {
         "color_scheme": "",
         "image_color_scheme": "scheme-dark",
-        "wrap_in_container": true
+        "width": "container"
       }
     },
     "products": {

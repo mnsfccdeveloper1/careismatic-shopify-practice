@@ -14,7 +14,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="canonical" href="{{ canonical_url }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="theme-color" content="{{ settings.color_primary }}">
 
 
@@ -69,9 +69,6 @@
       <meta name="description" content="{{ page_description | escape }}">
     {%- endif -%}
 
-    {%- if template.name == 'product' and template.suffix == 'set' -%}
-      <meta name="robots" content="noindex">
-    {%- endif -%}
 
     {%- if settings.google_site_verification != blank -%}
       <meta name="google-site-verification" content="{{ settings.google_site_verification }}">
@@ -88,12 +85,17 @@
     </script>
 
     {{ content_for_header }}
+
+    {% #  NaviStone  %}
+    <script src="cdn.datasteam.io/js/D2D5BE2640037F.js" async defer></script>
   </head>
 
   <body class="color-{{ settings.default_color_scheme }}">
 
-    <noscript><iframe src="www.googletagmanager.com/ns.html?id=GTM-WFG5HH63"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    {% if settings.gtm_container_id != blank %}
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ settings.gtm_container_id }}"
+          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    {% endif %}
 
     <a class="absolute left-0 top-0 -translate-y-20 focus:translate-0 bg-black text-white p-4" 
       style="z-index: 9999;" href="#MainContent">

@@ -14,19 +14,21 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
-        "announcement_GmtdKH": {
-          "type": "announcement",
-          "disabled": true,
-          "settings": {
-            "title": "<p>Some message that appears in announcement</p>",
-            "text_color": ""
-          }
-        },
         "announcement_VKy8Ay": {
           "type": "announcement",
+          "name": "Bar [fs-fr]",
           "settings": {
             "title": "<p>Free Shipping + Returns* $79+ <a href=\"/pages/faq\" title=\"FAQ\">Learn More</a></p>",
             "text_color": "#f5f5f5"
+          }
+        },
+        "announcement_GmtdKH": {
+          "type": "announcement",
+          "name": "Bar [sale]",
+          "disabled": true,
+          "settings": {
+            "title": "<p>Bold Colors. Bright Savings | <a href=\"https://cherokeeuniforms.com/collections/womens-sale\" title=\"Bold Colors. Bright Savings | Shop Sale\">Shop Sale</a></p>",
+            "text_color": ""
           }
         },
         "announcement_mYxkAG": {
@@ -39,8 +41,8 @@
         }
       },
       "block_order": [
-        "announcement_GmtdKH",
         "announcement_VKy8Ay",
+        "announcement_GmtdKH",
         "announcement_mYxkAG"
       ],
       "settings": {
@@ -54,8 +56,8 @@
         "mega_menu_844UQU": {
           "type": "mega_menu",
           "settings": {
-            "title": "Women",
-            "menu": "",
+            "title": "",
+            "menu": "women",
             "image_url": "shopify://collections/womens-new-arrivals",
             "image_text": ""
           }
@@ -64,7 +66,7 @@
           "type": "mega_menu",
           "settings": {
             "title": "Men",
-            "menu": "",
+            "menu": "men",
             "image_url": "",
             "image_text": ""
           }
@@ -81,7 +83,7 @@
           "disabled": true,
           "settings": {
             "title": "Unisex",
-            "menu": "",
+            "menu": "women",
             "image_url": "",
             "image_text": ""
           }
@@ -92,7 +94,7 @@
           "settings": {
             "title": "",
             "url": "",
-            "menu": ""
+            "menu": "blog"
           }
         },
         "nav_link_htEWm6": {

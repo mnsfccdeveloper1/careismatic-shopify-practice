@@ -21,7 +21,7 @@
       </div>
       <div class="inline">
         <dt class="sr-only">{{ 'products.product.price.sale_price' | t }}</dt>
-        <dd class="inline font-medium">{{- target.price | money -}}</dd>
+        <dd class="inline font-medium fs-body-lg">{{- target.price | money -}}</dd>
       </div>
     {%- else -%}
       <div class="inline">
@@ -46,14 +46,14 @@
       </div>
       <div class="inline">
         <dt class="sr-only">{{ 'products.product.price.sale_price' | t }}</dt>
-        <dd class="inline font-medium">{{- target.price | money -}}</dd>
+        <dd class="inline font-medium fs-body-lg">{{- target.price | money -}}</dd>
       </div>
     {%- else -%}
       <div class="inline">
         <dt class="sr-only">{{ 'products.product.price.regular_price' | t }}</dt>
         <dd class="inline-flex items-center gap-1">
           {%- if target.price_varies -%}
-            <span class="font-medium fs-body-lg">{{- target.price_min | money -}} - {{- target.price_max | money -}}</span>
+            <span class="font-medium fs-body-lg">{{- target.price_min | money -}}&ndash;{{- target.price_max | money -}}</span>
           {%- else -%}
             <span class="font-medium fs-body-lg">{{- target.price_min | money -}}</span>
           {%- endif -%}

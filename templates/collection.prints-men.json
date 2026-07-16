@@ -11,40 +11,13 @@
   "sections": {
     "header": {
       "type": "collection-header",
-      "disabled": true,
       "settings": {
         "color_scheme": "",
         "image_color_scheme": "scheme-dark",
-        "wrap_in_container": true
-      }
-    },
-    "hero_banner_TFFjAb": {
-      "type": "hero-banner",
-      "name": "Hero Banner",
-      "settings": {
-        "color_scheme": "",
-        "transparent_header": false,
-        "width": "full-width",
-        "add_padding": false,
-        "section_height": 30,
-        "horizontal_position": "justify-center",
-        "vertical_position": "items-center",
-        "text_alignment": "text-center",
-        "overlay_color": "#000000",
-        "overlay_opacity": 0,
-        "eyebrow": "",
-        "heading": "MEN'S PRINT SCRUBS",
-        "use_h1": true,
-        "heading_tag": "2",
-        "content_image_max_height": 80,
-        "richtext": "",
-        "fine_print": "",
-        "button_1_text": "WOMEN",
-        "button_1_link": "shopify://collections/womens-print-scrubs",
-        "button_1_style": "button button-outline-black",
-        "button_2_text": "MEN",
-        "button_2_link": "#",
-        "button_2_style": "button"
+        "width": "container",
+        "center_content": true,
+        "active_button_style": "underline-button",
+        "linked_button_style": "text-link"
       }
     },
     "products": {
@@ -65,7 +38,6 @@
   },
   "order": [
     "header",
-    "hero_banner_TFFjAb",
     "products",
     "seo_text_4tTMd4"
   ]

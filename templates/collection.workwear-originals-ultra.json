@@ -9,42 +9,16 @@
  */
 {
   "sections": {
-    "hero_banner_npJTTd": {
-      "type": "hero-banner",
-      "name": "Hero Banner",
-      "settings": {
-        "color_scheme": "scheme-dark",
-        "transparent_header": false,
-        "width": "full-width",
-        "add_padding": false,
-        "section_height": 50,
-        "horizontal_position": "justify-start",
-        "vertical_position": "items-end",
-        "text_alignment": "text-left",
-        "image": "shopify://shop_images/ck-hero-ww-originals-ultra-men.jpg",
-        "overlay_color": "#676c73",
-        "overlay_opacity": 20,
-        "eyebrow": "",
-        "heading": "Workwear Originals Ultra Men",
-        "use_h1": true,
-        "heading_tag": "1",
-        "content_image_max_height": 80,
-        "richtext": "",
-        "fine_print": "",
-        "button_1_text": "WOMEN",
-        "button_1_link": "shopify://collections/workwear-originals-ultra-womens-scrubs",
-        "button_1_style": "button button-outline-white",
-        "button_2_text": "MEN",
-        "button_2_link": "shopify://collections/workwear-originals-ultra-mens-scrubs",
-        "button_2_style": "button"
-      }
-    },
     "header": {
       "type": "collection-header",
+      "disabled": true,
       "settings": {
         "color_scheme": "",
-        "image_color_scheme": "scheme-dark",
-        "wrap_in_container": true
+        "image_color_scheme": "scheme-default",
+        "width": "container",
+        "center_content": false,
+        "active_button_style": "button",
+        "linked_button_style": "button button-outline-black"
       }
     },
     "products": {
@@ -129,7 +103,6 @@
     }
   },
   "order": [
-    "hero_banner_npJTTd",
     "header",
     "products",
     "seo_text_4tTMd4",

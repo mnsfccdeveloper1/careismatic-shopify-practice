@@ -46,6 +46,8 @@
       "id": "{{ variant.id }}",
       "available": {{ variant.available | json }},
       "price": {{ variant.price }},
+      "compare_at_price": {{ variant.compare_at_price | default: variant.price }},
+      "sale": {{ variant.metafields.meta.sale.value | default: false | json }},
       "final_sale": {{ variant.metafields.meta.finalSale.value | default: false | json }}
     }
     {%- endunless -%}

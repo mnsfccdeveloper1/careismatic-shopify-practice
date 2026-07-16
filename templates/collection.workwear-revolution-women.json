@@ -11,60 +11,13 @@
   "sections": {
     "header": {
       "type": "collection-header",
-      "disabled": true,
       "settings": {
-        "color_scheme": "",
-        "image_color_scheme": "scheme-aed956a8-0590-4fa9-8aea-ec51184aeac3",
-        "wrap_in_container": false
-      }
-    },
-    "hero_banner_QxF38X": {
-      "type": "hero-banner",
-      "name": "Hero Banner",
-      "settings": {
-        "color_scheme": "scheme-dark",
-        "transparent_header": false,
-        "width": "full-width",
-        "add_padding": false,
-        "section_height": 50,
-        "horizontal_position": "justify-start",
-        "vertical_position": "items-end",
-        "text_alignment": "text-left",
-        "image": "shopify://shop_images/ck-hero-ww-revolution-women.jpg",
-        "overlay_color": "#000000",
-        "overlay_opacity": 0,
-        "eyebrow": "",
-        "heading": "Workwear Revolution Women",
-        "use_h1": true,
-        "heading_tag": "1",
-        "content_image_max_height": 80,
-        "richtext": "",
-        "fine_print": "",
-        "button_1_text": "WOMEN",
-        "button_1_link": "shopify://collections/workwear-revolution-womens-scrubs",
-        "button_1_style": "button",
-        "button_2_text": "MEN",
-        "button_2_link": "shopify://collections/workwear-revolution-mens-scrubs",
-        "button_2_style": "button button-outline-white"
-      }
-    },
-    "rich_text_iqf77E": {
-      "type": "rich-text",
-      "disabled": true,
-      "name": "Rich Text",
-      "settings": {
-        "color_scheme": "",
-        "eyebrow": "",
-        "heading": "",
-        "image_max_height": 80,
-        "richtext": "",
-        "richtext_alignment": "text-left",
-        "button_1_text": "WOMEN",
-        "button_1_link": "shopify://collections/workwear-revolution-womens-scrubs",
-        "button_1_style": "button",
-        "button_2_text": "MEN",
-        "button_2_link": "shopify://collections/workwear-revolution-mens-scrubs",
-        "button_2_style": "button button-outline-black"
+        "color_scheme": "scheme-default",
+        "image_color_scheme": "scheme-dark",
+        "width": "container",
+        "center_content": false,
+        "active_button_style": "button",
+        "linked_button_style": "button button-outline-white"
       }
     },
     "products": {
@@ -141,8 +94,6 @@
   },
   "order": [
     "header",
-    "hero_banner_QxF38X",
-    "rich_text_iqf77E",
     "products",
     "collapsible_content_tLGE4m"
   ]

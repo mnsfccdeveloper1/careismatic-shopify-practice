@@ -10,8 +10,9 @@
   capture colorway_labels
     render 'colorway-labels', collection: collection
   endcapture
-  # colorway_labels is non-blank only on color PLPs (collections with a colorway
-  # metafield), so use it to opt those collections into hiding sold-out cards.
+  # colorway_labels is non-blank only on color PLPs (collections with a
+  # colorway_list metafield), so use it to opt those collections into hiding
+  # sold-out cards.
   assign hide_if_no_color = false
   if colorway_labels != blank
     assign hide_if_no_color = true
@@ -21,7 +22,7 @@
 
 {%- if collection.filters != empty or collection.products.size > 0 -%}
 
-  <facets-form>
+  <facets-form class="block scroll-mt-[var(--header-group-height)]">
     <form>
 
       <sticky-content>
@@ -93,8 +94,10 @@
         {%- endif -%}
       </div>
 
-      {% #  Product Grid  %}
-      <section class="md:px-gutter">
+    </form>
+
+    {% #  Product Grid  %}
+    <section class="md:px-gutter">
         <div class="max-w-container mx-auto  lg:pt-6 pb-lg">
           <div data-facets-form-content="products-list">
             {%- if collection.products.size > 0 -%}
@@ -115,6 +118,24 @@
 
                 {%- render 'product-listing-pagination', type: 'more', paginate: paginate -%}
 
+                <script type="application/ld+json">
+                  {
+                    "@context": "https://schema.org",
+                    "@type": "ItemList",
+                    "itemListElement": [
+                      {%- for product in collection.products -%}
+                        {%- unless forloop.first %},{% endunless -%}
+                        {
+                          "@type": "ListItem",
+                          "position": {{ forloop.index | plus: paginate.current_offset }},
+                          "name": {{ product.title | json }},
+                          "url": {{ request.origin | append: product.url | json }}
+                        }
+                      {%- endfor -%}
+                    ]
+                  }
+                </script>
+
               {%- endpaginate -%}
             {%- else -%}
               <div class="py-section text-center">
@@ -125,7 +146,6 @@
         </div>
       </section>
 
-    </form>
   </facets-form>
 
 

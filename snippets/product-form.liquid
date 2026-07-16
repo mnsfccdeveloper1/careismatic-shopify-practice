@@ -12,12 +12,16 @@
   The buy button starts disabled and is enabled by <product-fetcher> once
   the selection is complete.
 
-  The add-to-cart form and the back-in-stock panel are BOTH rendered, each
-  in its own wrapper ([data-product-fetcher-atc] / [data-product-fetcher-bis]).
+  The add-to-cart form, the back-in-stock panel, and the unavailable notice
+  are ALL rendered, each in its own wrapper ([data-product-fetcher-atc] /
+  [data-product-fetcher-bis] / [data-product-fetcher-unavailable]).
   The server can't know whether the shopper's picks are complete (Shopify
   auto-resolves a full variant even for partial option_values), so
   <product-fetcher> toggles [hidden] on the wrappers from its client-owned
-  pick state: BIS shows only for a fully-picked unavailable variant.
+  pick state: BIS shows only for a fully-picked unavailable variant, the
+  notice only for a fully-picked combination with no variant record.
+  BIS is the exception: it needs a variant id, so it is skipped entirely
+  when the server resolved no variant.
 {%- endcomment -%}
 
 {%- liquid
@@ -69,19 +73,26 @@
 -%}
 
 {%- comment -%}
-  No variant at all: Shopify resolves option_values to nil when the picked
-  combination has no variant record (never created in admin). Neither the
-  add-to-cart form nor BIS makes sense without a variant id, so render the
-  unavailable notice instead.
+  Unavailable notice: Shopify resolves option_values to nil both when a
+  fully-picked combination has no variant record (never created in admin)
+  AND when the picks are partial (color only) and the auto-defaulted first
+  size doesn't exist for that color. Liquid can't tell the two apart —
+  selected_variant is nil and value.selected reads as a full selection in
+  both cases — so, like BIS vs ATC, the notice and the form are BOTH
+  rendered and <product-fetcher> toggles [hidden] from its client-owned
+  pick state: the notice shows only for a fully-picked combination that
+  resolves no variant.
 {%- endcomment -%}
-{%- if variant == blank -%}
-<div class="bg-grey-light rounded-theme-sm p-sm my-6 fs-body-md">
-  {{- 'products.product.combination_unavailable' | t -}}
+<div data-product-fetcher-unavailable hidden>
+  <div class="bg-grey-light rounded-theme-sm p-sm my-6 fs-body-md">
+    {{- 'products.product.combination_unavailable' | t -}}
+  </div>
 </div>
-{%- else -%}
+{%- if variant != blank -%}
 <div data-product-fetcher-bis{% unless show_bis %} hidden{% endunless %}>
   {%- render 'back-in-stock', variant: variant, product_form_id: product_form_id -%}
 </div>
+{%- endif -%}
 <div data-product-fetcher-atc{% if show_bis %} hidden{% endif %}>
   {%- comment -%}
     selection-incomplete: server assumes the shopper hasn't picked
@@ -120,7 +131,7 @@
                 data-max="{{ variant.quantity_rule.max }}"
                 max="{{ variant.quantity_rule.max }}"
               {% endif %}
-              step="{{ variant.quantity_rule.increment }}"
+              step="{{ variant.quantity_rule.increment | default: 1 }}"
               value="{{ variant.quantity_rule.min | default: 1 }}"
               aria-label="{{ 'products.product.quantity.quantity' | t }}"
               form="{{ product_form_id }}">
@@ -172,4 +183,3 @@
     {%- endform -%}
   </ajax-cart-product-form>
 </div>
-{%- endif -%}

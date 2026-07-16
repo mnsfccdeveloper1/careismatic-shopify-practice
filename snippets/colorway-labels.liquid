@@ -1,8 +1,9 @@
 {%- comment -%}
   Outputs a '||'-delimited string of preferred color labels (downcased,
   whitespace-stripped) for a collection's product cards.
-  Precedence: all items of custom.colorway_list when non-empty,
-  else the single custom.colorway label. Outputs nothing if neither is set.
+  Labels come exclusively from custom.colorway_list; outputs nothing when the
+  list is empty. custom.colorway is display-only (chip label/color override)
+  and is never used for filtering or preselection.
 
   Accepts:
   - collection: {Object} collection with colorway metafields
@@ -26,11 +27,5 @@
       endif
     endif
   endfor
-  if _labels == blank
-    assign _single = collection.metafields.custom.colorway.value.label | strip
-    if _single != blank
-      assign _labels = _single | downcase
-    endif
-  endif
   echo _labels
 -%}

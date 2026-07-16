@@ -9,13 +9,15 @@
     assign has_description = true
   endif
 
-  # collection uses container
-  assign wrapper_class = 'max-w-container mx-auto'
-  assign gutter_class = ""
-  assign rounded_class = ""
-  if s.wrap_in_container
+  # layout — container gets desktop gutters + rounded corners, full width is edge to edge
+  # mobile is always edge to edge either way
+  assign wrapper_class = ''
+  assign gutter_class = ''
+  assign rounded_class = ''
+  if s.width == 'container'
+    assign wrapper_class = 'max-w-container mx-auto'
     assign gutter_class = ' lg:px-gutter '
-    assign rounded_class = "lg:rounded-theme"
+    assign rounded_class = 'lg:rounded-theme'
   endif
 
   # collection has image
@@ -36,6 +38,30 @@
   if collection.products.size == 0
     assign empty_text_class = 'text-center'
   endif
+
+  # matching men's/women's collection switcher
+  assign womens_collection = collection.metafields.meta.matching_womens_collection.value
+  assign mens_collection = collection.metafields.meta.matching_mens_collection.value
+  assign show_switcher = false
+  if womens_collection != blank or mens_collection != blank
+    assign show_switcher = true
+  endif
+
+  # switcher gap — wider when using the text-style buttons
+  assign switcher_gap_class = 'gap-3'
+  if s.active_button_style == 'underline-button' or s.active_button_style == 'text-link' or s.linked_button_style == 'underline-button' or s.linked_button_style == 'text-link'
+    assign switcher_gap_class = 'gap-4'
+  endif
+
+  # centered content + buttons
+  assign content_align_class = ''
+  assign row_justify_class = ''
+  assign button_row_class = 'flex mt-6 ' | append: switcher_gap_class
+  if s.center_content
+    assign content_align_class = ' text-center items-center'
+    assign row_justify_class = ' justify-center'
+    assign button_row_class = button_row_class | append: ' justify-center'
+  endif
 -%}
 
 
@@ -49,9 +75,22 @@
       {%- if collection.products.size == 0 -%}
 
         <div class="flex-center py-10 lg:py-20">
-          <h1 class="fs-display-2 text-center">
-            {{- collection.title | escape -}}
-          </h1>
+          <div>
+            <h1 class="fs-display-2 text-center">
+              {{- collection.title | escape -}}
+            </h1>
+            {%- if show_switcher -%}
+              <div class="flex mt-6 justify-center {{ switcher_gap_class }}">
+                {%- if womens_collection != blank -%}
+                  <a href="{{ womens_collection.url }}" class="{{ s.linked_button_style }}">Women</a>
+                  <span class="{{ s.active_button_style }} non-clickable" aria-current="page">Men</span>
+                {%- else -%}
+                  <span class="{{ s.active_button_style }} non-clickable" aria-current="page">Women</span>
+                  <a href="{{ mens_collection.url }}" class="{{ s.linked_button_style }}">Men</a>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+          </div>
         </div>
 
       {%- elsif has_image -%}
@@ -69,11 +108,25 @@
           {%- render 'media-loader', content: content, show_skeleton: true -%}
         </div>
 
-        <div class="relative z-10 flex items-center h-[250px] lg:h-[453px] px-gutter py-md lg:py-lg">
-          <div class="flex flex-col gap-2 lg:gap-6 max-w-[620px]">
-            <h1 class="fs-display-2 text-pretty">
-              {{- collection.title | escape -}}
-            </h1>
+        <div class="container relative z-10 flex items-center h-[250px] 
+          lg:h-[453px] py-md lg:py-lg {{ row_justify_class }}">
+          <div class="flex flex-col gap-2 lg:gap-6 max-w-[620px]{{ content_align_class }}">
+            <div>
+              <h1 class="fs-display-2 text-pretty">
+                {{- collection.title | escape -}}
+              </h1>
+              {%- if show_switcher -%}
+                <div class="{{ button_row_class }}">
+                  {%- if womens_collection != blank -%}
+                    <a href="{{ womens_collection.url }}" class="{{ s.linked_button_style }}">Women</a>
+                    <span class="{{ s.active_button_style }} non-clickable" aria-current="page">Men</span>
+                  {%- else -%}
+                    <span class="{{ s.active_button_style }} non-clickable" aria-current="page">Women</span>
+                    <a href="{{ mens_collection.url }}" class="{{ s.linked_button_style }}">Men</a>
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+            </div>
             {%- if has_description -%}
               <div class="text-pretty">
                 <rte-content class="rte">{{- collection.description -}}</rte-content>
@@ -84,11 +137,24 @@
 
       {%- else -%}
 
-        <div class="flex items-center px-gutter px-gutter py-10 lg:px-0 lg:py-20">
-          <div class="flex flex-col gap-2 lg:gap-6">
-            <h1 class="fs-display-2">
-              {{- collection.title | escape -}}
-            </h1>
+        <div class="flex items-center px-gutter py-6 lg:py-10 lg:px-0 {{ row_justify_class }}">
+          <div class="flex flex-col gap-2 lg:gap-6{{ content_align_class }}">
+            <div>
+              <h1 class="fs-display-2">
+                {{- collection.title | escape -}}
+              </h1>
+              {%- if show_switcher -%}
+                <div class="{{ button_row_class }}">
+                  {%- if womens_collection != blank -%}
+                    <a href="{{ womens_collection.url }}" class="{{ s.linked_button_style }}">Women</a>
+                    <span class="{{ s.active_button_style }} non-clickable" aria-current="page">Men</span>
+                  {%- else -%}
+                    <span class="{{ s.active_button_style }} non-clickable" aria-current="page">Women</span>
+                    <a href="{{ mens_collection.url }}" class="{{ s.linked_button_style }}">Men</a>
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+            </div>
             {%- if has_description -%}
               <div>
                 <rte-content class="rte">{{- collection.description -}}</rte-content>
@@ -119,11 +185,54 @@
       "id": "image_color_scheme",
       "label": "Image color scheme"
     },
+
+    { "type": "header", "content": "Layout" },
+    {
+      "type": "select",
+      "id": "width",
+      "label": "Width",
+      "options": [
+        { "value": "full-width", "label": "Full width" },
+        { "value": "container", "label": "Container" }
+      ],
+      "info": "Container adds side gutters and rounded corners on desktop. Mobile is always edge to edge.",
+      "default": "container"
+    },
     {
       "type": "checkbox",
-      "id": "wrap_in_container",
-      "label": "Wrap in container",
-      "default": true
+      "id": "center_content",
+      "label": "Center content and buttons",
+      "default": false
+    },
+
+    { "type": "header", "content": "Men/Women switcher" },
+    {
+      "type": "select",
+      "id": "active_button_style",
+      "label": "Active button style",
+      "options": [
+        { "value": "button", "label": "Primary" },
+        { "value": "button button-secondary", "label": "Secondary" },
+        { "value": "button button-outline-black", "label": "Outline black" },
+        { "value": "button button-outline-white", "label": "Outline white" },
+        { "value": "underline-button", "label": "Underline" },
+        { "value": "text-link", "label": "Text link" }
+      ],
+      "default": "button"
+    },
+    {
+      "type": "select",
+      "id": "linked_button_style",
+      "label": "Linked button style",
+      "options": [
+        { "value": "button", "label": "Primary" },
+        { "value": "button button-secondary", "label": "Secondary" },
+        { "value": "button button-outline-black", "label": "Outline black" },
+        { "value": "button button-outline-white", "label": "Outline white" },
+        { "value": "underline-button", "label": "Underline" },
+        { "value": "text-link", "label": "Text link" }
+      ],
+      "default": "button button-outline-black"
     }
   ]
 }

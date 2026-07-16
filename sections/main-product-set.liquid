@@ -23,9 +23,21 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
       {%- # Left column: wrapper lifestyle gallery -%}
       <div>
+        {%- # Sale badge — hidden until both components are fully picked; -%}
+        {%- # <product-set-group> reveals it when a selected component variant -%}
+        {%- # is flagged on sale (meta.sale), mirroring a standard PDP. -%}
+        {%- capture set_sale_badge -%}
+          <span
+            data-product-set-sale-badge
+            hidden
+            class="badge badge-sale inline-block py-1 px-2 rounded-[2px] text-nowrap">
+            {{- 'products.product.badges.sale' | t -}}
+          </span>
+        {%- endcapture -%}
         {%- render 'product-gallery',
           product: product,
-          variant: product.selected_or_first_available_variant
+          variant: product.selected_or_first_available_variant,
+          extra_badges: set_sale_badge
         -%}
       </div>
 
@@ -45,20 +57,29 @@
             </div>
 
             {%- liquid
-              assign set_initial_total = 0
+              # Combined range from the sub-products only (never the wrapper
+              # price). Lowest = sum of each component's cheapest variant;
+              # highest = sum of each component's priciest variant.
+              assign set_price_min = 0
+              assign set_price_max = 0
               if components and components.size > 0
                 for component in components
-                  assign initial_variant = component.selected_or_first_available_variant
-                  if initial_variant
-                    assign set_initial_total = set_initial_total | plus: initial_variant.price
-                  endif
+                  assign set_price_min = set_price_min | plus: component.price_min
+                  assign set_price_max = set_price_max | plus: component.price_max
                 endfor
               endif
             -%}
-            <div
-              data-product-set-price
-              class="font-medium">
-              {{- set_initial_total | money -}}
+            <div class="font-medium">
+              {%- # Fresh: combined range, shown until both components are fully picked -%}
+              <div data-product-set-price-fresh>
+                {%- if set_price_max > set_price_min -%}
+                  <span class="font-medium fs-body-lg">{{- set_price_min | money -}}&ndash;{{- set_price_max | money -}}</span>
+                {%- else -%}
+                  <span class="font-medium fs-body-lg">{{- set_price_min | money -}}</span>
+                {%- endif -%}
+              </div>
+              {%- # Complete: selected total (+ strike-through), populated by <product-set-group> -%}
+              <div data-product-set-price-complete hidden></div>
             </div>
 
             {% if current_variant.metafields.meta.clearance.value == true %}

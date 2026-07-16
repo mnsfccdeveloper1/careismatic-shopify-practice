@@ -36,7 +36,7 @@
 <product-fetcher
   section="sapi-complete-look"
   product-handle="{{ product.handle }}"
-  class="flex items-start gap-md py-xs border-b border-grey">
+  class="flex items-start gap-0 py-xs border-b border-grey">
   {%- render 'product-fetcher-state',
     product: product,
     variant: current_variant,
@@ -88,9 +88,10 @@
   </div>
 
   {%- # Columns B + C share the product-info gutter -%}
-  <div class="grow min-w-0 flex gap-md items-start p-sm">
+  <div class="grow min-w-0 flex gap-md items-start p-sm ">
     {%- # Column B — brand / title / price / description / color -%}
-    <div data-product-fetcher-area="variant" class="grow min-w-0 flex flex-col gap-0">
+    <div data-product-fetcher-area="variant" 
+      class="grow min-w-0 flex flex-col gap-0 w-1/2">
       {%- # Brand / title / price — 4px between each -%}
       <div class="flex flex-col gap-1">
         {%- render 'product-meta-collection', product: product -%}
@@ -140,7 +141,7 @@
     {%- # Column C — size / inseam selections + add to bag -%}
     <div
       data-product-fetcher-area="variant"
-      class="grow min-w-0 flex flex-col gap-0 max-w-[480px]">
+      class="grow min-w-0 flex flex-col gap-0 max-w-[480px] w-1/2">
       {%- unless product.has_only_default_variant -%}
         {%- for option in product.options_with_values -%}
           {%- unless option.name == 'Color' -%}
@@ -164,7 +165,7 @@
                 {%- endif -%}
               </div>
             {%- endcapture -%}
-            <div>
+            <div class="mb-4">
               {%- render 'product-options',
                 product: product,
                 collection_context: collection_context,

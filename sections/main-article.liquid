@@ -103,6 +103,7 @@
   </div>
 </article>
 
+{%- capture article_structured_data -%}{{ article | structured_data }}{%- endcapture -%}
 <script type="application/ld+json">
-  {{ article | structured_data }}
+  {{ article_structured_data | replace: '"@type":"Article"', '"@type":"BlogPosting"' }}
 </script>

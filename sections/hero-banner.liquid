@@ -41,6 +41,21 @@
     assign has_mobile_image = true
   endif
 
+  # Any media? Without media the banner collapses to content height
+  assign has_media = false
+  if has_desktop_image or has_desktop_video or has_mobile_image or has_mobile_video
+    assign has_media = true
+  endif
+
+  assign banner_class = ''
+  assign banner_style = ''
+  assign content_class = 'relative'
+  if has_media
+    assign banner_class = 'min-h-[360px]'
+    assign banner_style = 'height: ' | append: s.section_height | append: 'vh;'
+    assign content_class = 'absolute inset-0 h-full'
+  endif
+
   # Video posters
   assign desktop_poster = image | default: video.preview_image
   assign mobile_poster = mobile_image | default: mobile_video.preview_image
@@ -81,8 +96,8 @@
 <section {{ transparent_header  }} class="relative" >
   <div class="{{ outer_class }}">
     <div
-      class="relative {{ inner_rounded }} color-{{ s.color_scheme }} overflow-hidden min-h-[360px]"
-      style="height: {{ s.section_height }}vh;" >
+      class="relative {{ inner_rounded }} color-{{ s.color_scheme }} overflow-hidden {{ banner_class }}"
+      {% if banner_style != blank %}style="{{ banner_style }}"{% endif %} >
 
       {% #  Media (absolute, fills vh-based height)  %}
 
@@ -160,7 +175,7 @@
       {% endif %}
 
       {% #  Content  %}
-      <div class="absolute inset-0 z-1 flex {{ s.vertical_position }} {{ s.horizontal_position }} w-full h-full p-5 lg:p-lg">
+      <div class="{{ content_class }} z-1 flex {{ s.vertical_position }} {{ s.horizontal_position }} w-full p-5 lg:p-lg">
         <div class="{{ s.text_alignment }} max-w-[720px]">
           <div class="flex flex-col gap-4">
 

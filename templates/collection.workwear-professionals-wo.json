@@ -11,106 +11,13 @@
   "sections": {
     "header": {
       "type": "collection-header",
-      "disabled": true,
       "settings": {
         "color_scheme": "",
         "image_color_scheme": "scheme-dark",
-        "wrap_in_container": true
-      }
-    },
-    "hero_banner_Xf8Xpn": {
-      "type": "hero-banner",
-      "name": "Hero Banner",
-      "settings": {
-        "color_scheme": "scheme-dark",
-        "transparent_header": false,
-        "width": "full-width",
-        "add_padding": false,
-        "section_height": 50,
-        "horizontal_position": "justify-start",
-        "vertical_position": "items-end",
-        "text_alignment": "text-left",
-        "image": "shopify://shop_images/ck-hero-ww-professionals-women.jpg",
-        "overlay_color": "#000000",
-        "overlay_opacity": 0,
-        "eyebrow": "",
-        "heading": "Workwear Professionals Women",
-        "use_h1": true,
-        "heading_tag": "1",
-        "content_image_max_height": 80,
-        "richtext": "",
-        "fine_print": "",
-        "button_1_text": "WOMEN",
-        "button_1_link": "shopify://collections/workwear-professionals-womens-scrubs",
-        "button_1_style": "button",
-        "button_2_text": "MEN",
-        "button_2_link": "shopify://collections/workwear-professionals-mens-scrubs",
-        "button_2_style": "button button-outline-white"
-      }
-    },
-    "button_nav_LKqCJ9": {
-      "type": "button-nav",
-      "blocks": {
-        "button_74yknh": {
-          "type": "button",
-          "settings": {
-            "button_text": "WOMEN",
-            "button_link": "shopify://collections/womens-red-scrubs"
-          }
-        },
-        "button_Lt3LBd": {
-          "type": "button",
-          "settings": {
-            "button_text": "MEN",
-            "button_link": "shopify://collections/mens-red-scrubs"
-          }
-        }
-      },
-      "block_order": [
-        "button_74yknh",
-        "button_Lt3LBd"
-      ],
-      "disabled": true,
-      "name": "Button nav",
-      "settings": {
-        "color_scheme": "",
-        "alignment": "center",
-        "match_nested": false,
-        "top_padding": "pt-md",
-        "bottom_padding": "pb-md"
-      }
-    },
-    "button_list_TDGhWE": {
-      "type": "button-list",
-      "blocks": {
-        "button_4pPiyq": {
-          "type": "button",
-          "settings": {
-            "button_text": "Women",
-            "button_link": "#",
-            "button_style": "button"
-          }
-        },
-        "button_A9WNDm": {
-          "type": "button",
-          "settings": {
-            "button_text": "Men",
-            "button_link": "#",
-            "button_style": "button button-outline-black"
-          }
-        }
-      },
-      "block_order": [
-        "button_4pPiyq",
-        "button_A9WNDm"
-      ],
-      "disabled": true,
-      "name": "Button list",
-      "settings": {
-        "color_scheme": "",
-        "alignment": "left",
-        "top_padding": "pt-0",
-        "bottom_padding": "pb-md"
+        "width": "container",
+        "center_content": false,
+        "active_button_style": "button",
+        "linked_button_style": "button button-outline-white"
       }
     },
     "visual_nav_PnxHfD": {
@@ -120,7 +27,7 @@
           "type": "nav_item",
           "settings": {
             "image": "shopify://shop_images/6_ck-ck900a-cap_650.jpg",
-            "label": "Nav item",
+            "title": "Nav item",
             "link": "shopify://collections/test-all-items"
           }
         },
@@ -128,14 +35,14 @@
           "type": "nav_item",
           "settings": {
             "image": "shopify://shop_images/ck-form-women-hero-mobile-20250813.webp",
-            "label": "Nav item",
+            "title": "Nav item",
             "link": "shopify://collections/achieve-mens-scrubs"
           }
         },
         "nav_item_w9qrj9": {
           "type": "nav_item",
           "settings": {
-            "label": "Nav item",
+            "title": "Nav item",
             "link": "shopify://collections/atmos-mens-scrubs"
           }
         },
@@ -143,7 +50,7 @@
           "type": "nav_item",
           "settings": {
             "image": "shopify://shop_images/ck-ck857--ogs.png",
-            "label": "Nav item",
+            "title": "Nav item",
             "link": "shopify://collections/best-sellers"
           }
         },
@@ -151,7 +58,7 @@
           "type": "nav_item",
           "settings": {
             "image": "shopify://shop_images/04_ck-ck035a-nav_650.jpg",
-            "label": "Nav item",
+            "title": "Nav item",
             "link": "shopify://collections/unisex-best-sellers"
           }
         },
@@ -159,7 +66,7 @@
           "type": "nav_item",
           "settings": {
             "image": "shopify://shop_images/cherokee_ck-tf797--mki.png",
-            "label": "Nav item",
+            "title": "Nav item",
             "link": "shopify://collections/mens-best-sellers"
           }
         },
@@ -167,7 +74,7 @@
           "type": "nav_item",
           "settings": {
             "image": "shopify://shop_images/Screenshot_2026-05-08_155436.png",
-            "label": "Nav item",
+            "title": "Nav item",
             "link": ""
           }
         },
@@ -175,7 +82,7 @@
           "type": "nav_item",
           "settings": {
             "image": "shopify://shop_images/Cherokee_ckck651-apy-print-apy.gif",
-            "label": "Nav item",
+            "title": "Nav item",
             "link": "shopify://collections/womens-best-sellers"
           }
         },
@@ -183,7 +90,7 @@
           "type": "nav_item",
           "settings": {
             "image": "shopify://shop_images/sunflower-power-ck-prtspksnp.png",
-            "label": "Nav item",
+            "title": "Nav item",
             "link": "shopify://collections/womens-best-sellers"
           }
         }
@@ -206,7 +113,6 @@
         "use_max_width": true,
         "heading": "",
         "shape": "circle",
-        "corner_radius": 12,
         "carousel_loop": false,
         "slides_per_view_mobile": 3,
         "slides_per_view_tablet": 5,
@@ -234,9 +140,6 @@
   },
   "order": [
     "header",
-    "hero_banner_Xf8Xpn",
-    "button_nav_LKqCJ9",
-    "button_list_TDGhWE",
     "visual_nav_PnxHfD",
     "products",
     "seo_text_4tTMd4"

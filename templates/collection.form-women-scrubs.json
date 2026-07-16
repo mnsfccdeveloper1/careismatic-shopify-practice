@@ -9,43 +9,12 @@
  */
 {
   "sections": {
-    "hero_banner_Pa77dH": {
-      "type": "hero-banner",
-      "name": "Hero Banner",
-      "settings": {
-        "color_scheme": "scheme-dark",
-        "transparent_header": false,
-        "width": "full-width",
-        "add_padding": false,
-        "section_height": 50,
-        "horizontal_position": "justify-start",
-        "vertical_position": "items-end",
-        "text_alignment": "text-left",
-        "image": "shopify://shop_images/ck-hero-form-women.jpg",
-        "overlay_color": "#000000",
-        "overlay_opacity": 0,
-        "eyebrow": "",
-        "heading": "Form Women",
-        "use_h1": true,
-        "heading_tag": "1",
-        "content_image_max_height": 80,
-        "richtext": "",
-        "fine_print": "",
-        "button_1_text": "WOMEN",
-        "button_1_link": "shopify://collections/form-womens-scrubs",
-        "button_1_style": "button",
-        "button_2_text": "MEN",
-        "button_2_link": "shopify://collections/form-mens-scrubs",
-        "button_2_style": "button button-outline-white"
-      }
-    },
     "header": {
       "type": "collection-header",
-      "disabled": true,
       "settings": {
         "color_scheme": "",
         "image_color_scheme": "scheme-dark",
-        "wrap_in_container": true
+        "width": "container"
       }
     },
     "products": {
@@ -77,21 +46,21 @@
           "type": "item",
           "settings": {
             "heading": "What fabric and technology is used in Cherokee FORM women's scrubs?",
-            "content": "FORM scrubs are made with a premium 86% nylon and 14% spandex blend, featuring Cherokee's exclusive 360º Stretch technology. The fabric combines the appearance of woven fabric with the resilience of knitwear — it follows your shape for a polished look and feel through even the longest shifts. Power-mesh panels are incorporated into select styles for added fashionable flexibility. The fabric is moisture-wicking and easy-care, and the super-smooth surface gives FORM its distinctive elevated finish."
+            "content": "FORM scrubs are made with a premium 86% nylon and 14% spandex blend, featuring Cherokee's exclusive 360\u00ba Stretch technology. The fabric combines the appearance of woven fabric with the resilience of knitwear \u2014 it follows your shape for a polished look and feel through even the longest shifts. Power-mesh panels are incorporated into select styles for added fashionable flexibility. The fabric is moisture-wicking and easy-care, and the super-smooth surface gives FORM its distinctive elevated finish."
           }
         },
         "item_YBKaEA": {
           "type": "item",
           "settings": {
             "heading": "How do Cherokee FORM women's scrubs fit?",
-            "content": "FORM scrubs are designed with a flattering drape and stylish lines that follow your shape — not baggy, not restrictive. The 360º Stretch fabric moves with you in every direction while maintaining a polished, structured look. Pant silhouettes range from a trouser cut for a tailored, professional look to a mid rise tapered leg and a mid rise jogger for a more fitted, contemporary fit. Tops include standard V-neck lengths and tuck-in styles for a clean tucked look. FORM is built for healthcare professionals who want their <a href=\"https://www.cherokeeuniforms.com/cherokee-womens-scrubs\"><span style=\"text-decoration:underline\">scrubs</span></a> to look as put-together as they do."
+            "content": "FORM scrubs are designed with a flattering drape and stylish lines that follow your shape \u2014 not baggy, not restrictive. The 360\u00ba Stretch fabric moves with you in every direction while maintaining a polished, structured look. Pant silhouettes range from a trouser cut for a tailored, professional look to a mid rise tapered leg and a mid rise jogger for a more fitted, contemporary fit. Tops include standard V-neck lengths and tuck-in styles for a clean tucked look. FORM is built for healthcare professionals who want their <a href=\"https://www.cherokeeuniforms.com/cherokee-womens-scrubs\"><span style=\"text-decoration:underline\">scrubs</span></a> to look as put-together as they do."
           }
         },
         "item_GWMNEz": {
           "type": "item",
           "settings": {
             "heading": "What makes Cherokee FORM different from other Cherokee scrubs?",
-            "content": "FORM is Cherokee's most elevated line — designed specifically for healthcare professionals who appreciate sophisticated workwear. The key differences are the fabric system and the finish. The premium 86% nylon and 14% spandex blend with 360º Stretch technology gives FORM the appearance of woven fabric — structured and polished — with the stretch and comfort of knitwear underneath. Power-mesh panels add breathability without breaking the clean aesthetic. Signature details like antique copper hardware set FORM apart visually from the rest of the Cherokee scrubs. For professionals who want scrubs that look refined on the floor, FORM is that line."
+            "content": "FORM is Cherokee's most elevated line \u2014 designed specifically for healthcare professionals who appreciate sophisticated workwear. The key differences are the fabric system and the finish. The premium 86% nylon and 14% spandex blend with 360\u00ba Stretch technology gives FORM the appearance of woven fabric \u2014 structured and polished \u2014 with the stretch and comfort of knitwear underneath. Power-mesh panels add breathability without breaking the clean aesthetic. Signature details like antique copper hardware set FORM apart visually from the rest of the Cherokee scrubs. For professionals who want scrubs that look refined on the floor, FORM is that line."
           }
         }
       },
@@ -113,7 +82,6 @@
     }
   },
   "order": [
-    "hero_banner_Pa77dH",
     "header",
     "products",
     "seo_text_4tTMd4",

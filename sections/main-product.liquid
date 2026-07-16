@@ -21,7 +21,9 @@
   # gallery would otherwise show EVERY color's media. Recover the URL-selected
   # color and point the gallery at the first variant that shares it, so the
   # correct color's images (featured image first) are returned. current_variant
-  # stays null so the form keeps showing the "unavailable" notice.
+  # stays null; product-form renders both the "unavailable" notice and the
+  # gated form, and <product-fetcher> picks one from its client pick state
+  # (notice only when the shopper has FULLY picked a non-existent combo).
   assign gallery_variant = current_variant
   if gallery_variant == null
     assign selected_color = ''

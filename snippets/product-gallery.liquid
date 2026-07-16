@@ -5,6 +5,8 @@
   Accepts:
   - product: {Object}
   - variant: {Object} optional
+  - extra_badges: {String} optional — extra badge HTML appended to the gallery
+    badge stack (used by the set PDP to add a component-driven Sale badge)
 {%- endcomment -%}
 
 {%- liquid
@@ -117,8 +119,9 @@
           {%- endfor -%}
         </tarot-track>
 
-        <div class="absolute top-4 left-4 z-2">
+        <div class="absolute top-4 left-4 z-2 flex flex-wrap gap-1 lg:gap-2">
           {%- render 'product-badges', product: product, variant: variant, badge_level: 'variant' -%}
+          {{ extra_badges }}
         </div>
       </tarot-viewport>
 
