@@ -64,7 +64,7 @@
           "type": "mega_menu",
           "settings": {
             "title": "Men",
-            "menu": "",
+            "menu": "men",
             "image_url": "",
             "image_text": ""
           }
