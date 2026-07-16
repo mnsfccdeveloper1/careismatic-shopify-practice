@@ -90,7 +90,6 @@
         },
         "dropdown_menu_8DUEKB": {
           "type": "dropdown_menu",
-          "disabled": true,
           "settings": {
             "title": "",
             "url": "",
