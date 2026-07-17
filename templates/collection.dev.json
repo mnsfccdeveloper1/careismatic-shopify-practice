@@ -96,10 +96,5 @@
       }
     }
   },
-  "order": [
-    "header",
-    "visual_nav_BULH8z",
-    "products",
-    "seo_text_4tTMd4"
-  ]
+  "order": ["header", "visual_nav_BULH8z", "products", "seo_text_4tTMd4"]
 }

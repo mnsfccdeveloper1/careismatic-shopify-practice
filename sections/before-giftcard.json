@@ -11,6 +11,5 @@
   "type": "custom.before_giftcard",
   "name": "Before Giftcard",
   "sections": {},
-  "order": [
-  ]
+  "order": []
 }

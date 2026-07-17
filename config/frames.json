@@ -1,11 +1,7 @@
 {
   "default": {
     "name": "Default",
-    "top": [
-
-    ],
-    "bottom": [
-
-    ]
+    "top": [],
+    "bottom": []
   }
 }

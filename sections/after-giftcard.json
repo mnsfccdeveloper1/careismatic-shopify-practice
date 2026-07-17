@@ -11,6 +11,5 @@
   "type": "custom.after_giftcard",
   "name": "After Giftcard",
   "sections": {},
-  "order": [
-  ]
+  "order": []
 }

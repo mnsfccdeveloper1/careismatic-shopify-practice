@@ -33,8 +33,5 @@
       }
     }
   },
-  "order": [
-    "page_content",
-    "liquid_code_EPn8GA"
-  ]
+  "order": ["page_content", "liquid_code_EPn8GA"]
 }

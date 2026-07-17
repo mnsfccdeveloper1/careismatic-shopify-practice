@@ -36,9 +36,5 @@
       }
     }
   },
-  "order": [
-    "header",
-    "products",
-    "seo_text_4tTMd4"
-  ]
+  "order": ["header", "products", "seo_text_4tTMd4"]
 }

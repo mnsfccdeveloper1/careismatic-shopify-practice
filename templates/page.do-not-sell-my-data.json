@@ -27,9 +27,7 @@
           }
         }
       },
-      "block_order": [
-        "pandectes_gdpr_ccpa_X7eJAc"
-      ],
+      "block_order": ["pandectes_gdpr_ccpa_X7eJAc"],
       "settings": {
         "section_id": "",
         "color_scheme": "",
@@ -45,8 +43,5 @@
       }
     }
   },
-  "order": [
-    "page_header",
-    "1778020139518b1b6f"
-  ]
+  "order": ["page_header", "1778020139518b1b6f"]
 }

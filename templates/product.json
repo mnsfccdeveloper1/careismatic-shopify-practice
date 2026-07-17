@@ -49,10 +49,7 @@
           }
         }
       },
-      "block_order": [
-        "reviews_yftLap",
-        "qa_TDYrfL"
-      ],
+      "block_order": ["reviews_yftLap", "qa_TDYrfL"],
       "name": "Product Reviews",
       "settings": {
         "section_id": "yotpoReviewsWidget",

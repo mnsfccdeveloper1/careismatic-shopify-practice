@@ -1,1 +1,6 @@
-{"markets":{"international":{"parent":"@default"},"canada":{"parent":"@default"}}}
+{
+  "markets": {
+    "international": { "parent": "@default" },
+    "canada": { "parent": "@default" }
+  }
+}

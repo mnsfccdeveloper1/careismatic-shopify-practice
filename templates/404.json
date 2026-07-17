@@ -1,1 +1,15 @@
-{"sections":{"main":{"type":"main-404","settings":{"color_scheme":"","content_title":"404","content_text":"Oops, nothing found.","content_button_label":"Back Home","content_button_url":"\/"}}},"order":["main"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-404",
+      "settings": {
+        "color_scheme": "",
+        "content_title": "404",
+        "content_text": "Oops, nothing found.",
+        "content_button_label": "Back Home",
+        "content_button_url": "\/"
+      }
+    }
+  },
+  "order": ["main"]
+}

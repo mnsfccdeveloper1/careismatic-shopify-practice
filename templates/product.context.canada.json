@@ -1,1 +1,7 @@
-{"parent":"product.json","context":{"market":"canada"},"sections":{"main":{"settings":{"incentive_1_text":"Shipping from $35"}}}}
+{
+  "parent": "product.json",
+  "context": { "market": "canada" },
+  "sections": {
+    "main": { "settings": { "incentive_1_text": "Shipping from $35" } }
+  }
+}

@@ -138,10 +138,5 @@
       }
     }
   },
-  "order": [
-    "header",
-    "visual_nav_PnxHfD",
-    "products",
-    "seo_text_4tTMd4"
-  ]
+  "order": ["header", "visual_nav_PnxHfD", "products", "seo_text_4tTMd4"]
 }

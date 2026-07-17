@@ -92,9 +92,5 @@
       }
     }
   },
-  "order": [
-    "header",
-    "products",
-    "collapsible_content_tLGE4m"
-  ]
+  "order": ["header", "products", "collapsible_content_tLGE4m"]
 }

@@ -283,10 +283,7 @@
           }
         }
       },
-      "block_order": [
-        "content_kD3Dp4",
-        "content_3c7rxH"
-      ],
+      "block_order": ["content_kD3Dp4", "content_3c7rxH"],
       "name": "Image Collage",
       "settings": {
         "color_scheme": "scheme-default",
@@ -335,11 +332,7 @@
           }
         }
       },
-      "block_order": [
-        "slide_dwD3Nw",
-        "slide_CKcXiK",
-        "slide_Kzjbkd"
-      ],
+      "block_order": ["slide_dwD3Nw", "slide_CKcXiK", "slide_Kzjbkd"],
       "name": "Shop the Look",
       "settings": {
         "color_scheme": "scheme-light-grey-blue-heading",

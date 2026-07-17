@@ -52,8 +52,5 @@
       }
     }
   },
-  "order": [
-    "hero_banner_rTgd8E",
-    "main"
-  ]
+  "order": ["hero_banner_rTgd8E", "main"]
 }

@@ -23,8 +23,5 @@
       "settings": {}
     }
   },
-  "order": [
-    "main",
-    "size_guide"
-  ]
+  "order": ["main", "size_guide"]
 }

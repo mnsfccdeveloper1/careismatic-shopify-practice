@@ -86,11 +86,7 @@
           }
         }
       },
-      "block_order": [
-        "column_7EbRtj",
-        "column_YQ7w8b",
-        "column_Prxjrx"
-      ],
+      "block_order": ["column_7EbRtj", "column_YQ7w8b", "column_Prxjrx"],
       "name": "Multi Column",
       "settings": {
         "color_scheme": "",

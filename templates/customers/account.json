@@ -11,17 +11,12 @@
   "sections": {
     "main": {
       "type": "main-account",
-      "settings": {
-      }
+      "settings": {}
     },
     "16805423887eb2059b": {
       "type": "apps",
-      "settings": {
-      }
+      "settings": {}
     }
   },
-  "order": [
-    "main",
-    "16805423887eb2059b"
-  ]
+  "order": ["main", "16805423887eb2059b"]
 }
