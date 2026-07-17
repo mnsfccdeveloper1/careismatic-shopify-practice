@@ -3,7 +3,7 @@
     "header": {
       "type": "collection-header",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-default",
         "image_color_scheme": "scheme-dark",
         "width": "container",
         "center_content": false,
