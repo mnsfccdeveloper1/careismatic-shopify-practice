@@ -3,7 +3,7 @@
     "header": {
       "type": "collection-header",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-default",
         "image_color_scheme": "scheme-dark",
         "width": "container",
         "center_content": true,
@@ -17,19 +17,10 @@
         "filter_color_scheme": "scheme-default",
         "products_per_page": 16
       }
-    },
-    "seo_text_4tTMd4": {
-      "type": "seo-text",
-      "name": "SEO Text",
-      "settings": {
-        "content": "{{ collection.metafields.seo.content | metafield_tag }}",
-        "color_scheme": "scheme-0d9bed0c-0f1f-4f9d-99af-d15d3a707bfd"
-      }
     }
   },
   "order": [
     "header",
-    "products",
-    "seo_text_4tTMd4"
+    "products"
   ]
 }
