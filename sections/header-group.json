@@ -53,6 +53,15 @@
     "header": {
       "type": "header",
       "blocks": {
+        "mega_menu_9jQPP8": {
+          "type": "mega_menu",
+          "settings": {
+            "title": "hj",
+            "menu": "main-menu",
+            "image_url": "",
+            "image_text": ""
+          }
+        },
         "dropdown_menu_iUDR79": {
           "type": "dropdown_menu",
           "settings": {
@@ -105,6 +114,7 @@
         }
       },
       "block_order": [
+        "mega_menu_9jQPP8",
         "dropdown_menu_iUDR79",
         "mega_menu_844UQU",
         "mega_menu_6nnwML",
