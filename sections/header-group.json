@@ -53,6 +53,14 @@
     "header": {
       "type": "header",
       "blocks": {
+        "dropdown_menu_iUDR79": {
+          "type": "dropdown_menu",
+          "settings": {
+            "title": "Menu",
+            "url": "",
+            "menu": "main-menu"
+          }
+        },
         "mega_menu_844UQU": {
           "type": "mega_menu",
           "settings": {
@@ -88,14 +96,6 @@
             "image_text": ""
           }
         },
-        "dropdown_menu_8DUEKB": {
-          "type": "dropdown_menu",
-          "settings": {
-            "title": "",
-            "url": "",
-            "menu": ""
-          }
-        },
         "nav_link_htEWm6": {
           "type": "nav_link",
           "settings": {
@@ -105,11 +105,11 @@
         }
       },
       "block_order": [
+        "dropdown_menu_iUDR79",
         "mega_menu_844UQU",
         "mega_menu_6nnwML",
         "nav_link_Qt8nmy",
         "mega_menu_PkJ3Ye",
-        "dropdown_menu_8DUEKB",
         "nav_link_htEWm6"
       ],
       "name": "Main menu",
