@@ -53,6 +53,14 @@
     "header": {
       "type": "header",
       "blocks": {
+        "dropdown_menu_i7wYD8": {
+          "type": "dropdown_menu",
+          "settings": {
+            "title": "Women",
+            "url": "shopify://collections/scrubs",
+            "menu": "women-1"
+          }
+        },
         "mega_menu_844UQU": {
           "type": "mega_menu",
           "settings": {
@@ -66,7 +74,7 @@
           "type": "mega_menu",
           "settings": {
             "title": "Men",
-            "menu": "men",
+            "menu": "",
             "image_url": "",
             "image_text": ""
           }
@@ -97,6 +105,7 @@
         }
       },
       "block_order": [
+        "dropdown_menu_i7wYD8",
         "mega_menu_844UQU",
         "mega_menu_6nnwML",
         "nav_link_Qt8nmy",
