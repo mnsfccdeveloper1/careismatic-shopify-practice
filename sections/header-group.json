@@ -71,6 +71,13 @@
             "image_text": ""
           }
         },
+        "nav_link_FfKx9V": {
+          "type": "nav_link",
+          "settings": {
+            "title": "Sale",
+            "url": "shopify://collections/sale"
+          }
+        },
         "nav_link_Qt8nmy": {
           "type": "nav_link",
           "settings": {
@@ -99,6 +106,7 @@
       "block_order": [
         "mega_menu_844UQU",
         "mega_menu_6nnwML",
+        "nav_link_FfKx9V",
         "nav_link_Qt8nmy",
         "mega_menu_PkJ3Ye",
         "nav_link_htEWm6"
