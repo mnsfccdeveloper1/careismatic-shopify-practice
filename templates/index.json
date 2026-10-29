@@ -20,8 +20,7 @@
         "horizontal_position": "justify-center",
         "vertical_position": "items-center",
         "text_alignment": "text-center",
-        // "video": "shopify://files/videos/ck-hero-brand-film-20260603.mp4",
-        // "mobile_video": "shopify://files/videos/ck-mobile-hero-brand-film-20260603.mp4",
+        "video": "shopify://files/videos/66c09852579e448bb4b117a28c73b2cf.HD-1080p-7.2Mbps-91188831.mp4",
         "overlay_color": "#000000",
         "overlay_opacity": 10,
         "eyebrow": "",
@@ -52,8 +51,6 @@
         "horizontal_position": "justify-end",
         "vertical_position": "items-center",
         "text_alignment": "text-left",
-        "image": "shopify://shop_images/ck-hero-desktop-20260623_2b64811f-91fa-4f54-9b30-f586a73300f6.jpg",
-        "mobile_image": "shopify://shop_images/ck-hero-mobile-20260623.jpg",
         "overlay_color": "#000000",
         "overlay_opacity": 0,
         "eyebrow": "",
@@ -78,48 +75,42 @@
           "type": "collection",
           "settings": {
             "collection": "womens-scrub-tops",
-            "custom_title": "SCRUB TOPS",
-            "image": "shopify://shop_images/ck-cat-tops-20260602.jpg"
+            "custom_title": "SCRUB TOPS"
           }
         },
         "collection_PAMWTm": {
           "type": "collection",
           "settings": {
             "collection": "womens-scrub-pants",
-            "custom_title": "SCRUB PANTS",
-            "image": "shopify://shop_images/ck-cat-pants-20260602.jpg"
+            "custom_title": "SCRUB PANTS"
           }
         },
         "collection_xYr9yB": {
           "type": "collection",
           "settings": {
             "collection": "womens-scrubs-sets",
-            "custom_title": "SCRUB SETS",
-            "image": "shopify://shop_images/ck-cat-sets-20260602.jpg"
+            "custom_title": "SCRUB SETS"
           }
         },
         "collection_638Rjx": {
           "type": "collection",
           "settings": {
             "collection": "womens-print-scrubs",
-            "custom_title": "PRINTS",
-            "image": "shopify://shop_images/ck-cat-prints-20260602.jpg"
+            "custom_title": "PRINTS"
           }
         },
         "collection_nVPiDg": {
           "type": "collection",
           "settings": {
             "collection": "womens-scrub-jackets",
-            "custom_title": "SCRUB JACKETS",
-            "image": "shopify://shop_images/ck-cat-jackets-20260602.jpg"
+            "custom_title": "SCRUB JACKETS"
           }
         },
         "collection_gykBMi": {
           "type": "collection",
           "settings": {
             "collection": "womens-lab-coats",
-            "custom_title": "LAB COATS",
-            "image": "shopify://shop_images/ck-cat-labcoats-20260602.jpg"
+            "custom_title": "LAB COATS"
           }
         }
       },
@@ -252,7 +243,6 @@
           "type": "content",
           "settings": {
             "color_scheme": "scheme-dark",
-            "image": "shopify://shop_images/achieve-women-3x4.jpg",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
             "eyebrow": "",
@@ -269,7 +259,6 @@
           "type": "content",
           "settings": {
             "color_scheme": "scheme-dark",
-            "image": "shopify://shop_images/achieve-men-3x4.jpg",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
             "eyebrow": "",
@@ -283,7 +272,10 @@
           }
         }
       },
-      "block_order": ["content_kD3Dp4", "content_3c7rxH"],
+      "block_order": [
+        "content_kD3Dp4",
+        "content_3c7rxH"
+      ],
       "name": "Image Collage",
       "settings": {
         "color_scheme": "scheme-default",
@@ -298,7 +290,6 @@
         "slide_dwD3Nw": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/CK840_IRON_shop-the-look.jpg",
             "product_1": "form-by-cherokee-womens-curved-hemline-v-neck-top-ckck840",
             "product_1_color_label": "Iron",
             "product_2": "womens-mid-rise-tapered-leg-drawstring-scrub-pant-ckck095",
@@ -310,7 +301,6 @@
         "slide_CKcXiK": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/WW695_CAR_shop-the-look.jpg",
             "product_1": "mens-utility-4-pocket-v-neck-scrub-top-ckww695",
             "product_1_color_label": "Caribbean Blue",
             "product_2": "mens-tapered-leg-zip-fly-drawstring-scrub-pant-ckww190",
@@ -322,7 +312,6 @@
         "slide_Kzjbkd": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/shop-the-look.jpg",
             "product_1": "womens-shaped-3-pocket-mock-wrap-scrub-top-ckww610",
             "product_1_color_label": "Grape",
             "product_2": "womens-drawstring-flare-scrub-pant-ckww120",
@@ -332,7 +321,11 @@
           }
         }
       },
-      "block_order": ["slide_dwD3Nw", "slide_CKcXiK", "slide_Kzjbkd"],
+      "block_order": [
+        "slide_dwD3Nw",
+        "slide_CKcXiK",
+        "slide_Kzjbkd"
+      ],
       "name": "Shop the Look",
       "settings": {
         "color_scheme": "scheme-light-grey-blue-heading",
